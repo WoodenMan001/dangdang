@@ -119,9 +119,11 @@
 							<td>登录密码</td>
 							<td>
 								<input type="password" id="password" name="password" maxlength='20'>
+								<span name="warn">密码长度6-20个字符，请重新输入</span>
 								<span name="hint">密码6-20个字符，可由英文，数字及符号组成</span>
-								<span>键盘大写锁定已打开，请注意大小写!</span>
-								<span name='warn'>
+								<span class="upperCase">键盘大写锁定已打开，请注意大小写!</span>
+
+								<span class='intensity'>
 									<span></span>
 									<span></span>
 									<span></span>
@@ -142,17 +144,18 @@
 						<tr>
 							<td>验证码</td>
 							<td class="code">
-								<input type="input" id="identifyingCode" name="identifyingCode " placeholder="请输入验证码">
+								<input type="input" id="identifyingCode" name="identifyingCode " maxlength='4' placeholder="请输入验证码">
 								<a id="code"></a>
 								<a >换张图</a>
 								<span name="hint">请填写图片中的字符</span>
 								<span name='warn'></span>
+								<i class="fa" name="yz"></i>
 							</td>
 						</tr>
 						<tr>
 							<td></td>
 							<td class="clause">
-								<input type="checkbox" name="">
+								<input type="checkbox" id="check" checked="">
 								<span>
 									我已阅读并同意 
 									<a href="">《当当交易条款》</a> 
@@ -164,7 +167,7 @@
 						<tr>
 							<td></td>
 							<td >
-								<a class="btn">立即注册</a>
+								<a class="btn"  id="btn">立即注册</a>
 							</td>
 						</tr>
 					</table>

@@ -1,8 +1,8 @@
 /*
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:16
-* @Last Modified by:   ljgoh
-* @Last Modified time: 2018-05-12 10:57:00
+* @Last Modified by:   WoodenMan001
+* @Last Modified time: 2018-05-12 15:56:48
 */
 
 @import '../common/common';
@@ -221,7 +221,11 @@ section.rs .main {
 			position: absolute;
 			display: none;
 			right: -15px;
-			top: 10px;
+			top: 13px;
+		}
+
+		.code i[name="yz"] {
+			right: 150px;
 		}
 	}
 	.content_form td {
@@ -279,6 +283,28 @@ section.rs .main {
 		
 		span[name='warn'] {
 			color: red;
+		}
+
+		.intensity span {
+			float: left;
+			position:relative;
+			display:inline-block;
+			width: 22px;
+			height:10px;
+			top: 0;
+			margin:0;
+			margin-left:3px;
+			padding:2px 0;
+		}
+
+		span.upperCase {
+			display: none;
+			border: 1px solid #fcd9b0;
+		    line-height: 18px;
+		    background-color: #fff0cf;
+		    color: #ff8400;
+		    left: 0;
+		    width: 302px;
 		}
 
 		//验证码
