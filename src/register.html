@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新用户注册 - 当当网</title>
+	<link rel="stylesheet" type="text/css" href="css/register/register.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body class="register">
+	<header class="rs content_wrap" >
+		<div class="main">
+			<div class="logo">
+				<a href="index.html">
+					<img src="https://login.dangdang.com/images/ddnewhead_logo.gif">
+				</a>
+			</div>
+			<div class="header_nav">
+				<ul class="nav">
+					<li>
+						<i class="fa fa-cart-plus"></i>
+						<a href="">购物车</a>
+					</li>
+					<li class="bulkhead"></li>
+					<li><a href="">我的订单</a></li>
+					<li class="bulkhead"></li>
+					<li class="icon">
+						<a href="">
+							我的当当
+							<i class="fa fa-sort-desc" aria-hidden="true"></i>
+						</a>
+						<div class="drop-down">
+							<ul class="after">
+								<li>
+									<a href="">我的订单</a>
+								</li>
+								<li>
+									<a href="">购物礼券</a>
+								</li>
+								<li>
+									<a href="">我的积分</a>
+								</li>
+								<li>
+									<a href="">我的收藏</a>
+								</li>
+								<li>
+									<a href="">我的评论</a>
+								</li>
+								<li>
+									<a href="">数字商品</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="bulkhead"></li>
+					<li class="icon">
+						<a href="">礼品卡
+							<i class="fa fa-sort-desc" aria-hidden="true"></i>
+						</a>
+						<div class="drop-down">
+							<ul>
+								<li>
+									<a href="">购买</a>
+								</li>
+								<li>
+									<a href="">激活</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="bulkhead"></li>
+					<li>
+						<a href="">手机当当</a>
+					</li>
+					<li class="bulkhead"></li>
+					<li><a href="">企业销售</a></li>
+					<li class="bulkhead"></li>
+					<li><a href="">帮助</a></li>
+				</ul>
+				<p>欢迎光临当当网，请
+					<a href="login.html">登录</a>  
+					<a href="#">免费注册</a></p>
+			</div>
+		</div>
+	</header>
+	
+	<section class="rs content_wrap">
+		<form class="main">
+			<div class="container">
+				<div class="header">
+					<span>
+						<i class="fa fa-home"></i>
+						<a href="index.html">当当首页</a>
+						<a href="">注册帮助</a>
+					</span>
+					<a class="active" href="#">新用户注册</a>
+					<a >企业用户注册</a>
+				</div>
+				<div class="aside">
+					<a href=""></a>
+				</div>
+				<div class="content">
+					<div class="content_warn">
+						<div>
+							<i class="fa fa-exclamation-circle"></i>
+							贴心提示：请勿设置与邮箱密码相同的账户登录密码或支付密码，防止不法分子窃取您的当当账户信息，<a href="">谨防诈骗！</a>
+						</div>
+					</div>
+					<table class="content_form">
+						<tr>
+							<td>手机号码</td>
+							<td>
+								<input type="input" id="tel" name="tel" placeholder="请输入您的手机号码">
+								<span name="hint">手机号可用于登录、找回密码、接收订单通知等服务</span>
+								<span name='warn' ></span>
+								<i class="fa" name="yz"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>登录密码</td>
+							<td>
+								<input type="password" id="password" name="password" maxlength='20'>
+								<span name="hint">密码6-20个字符，可由英文，数字及符号组成</span>
+								<span>键盘大写锁定已打开，请注意大小写!</span>
+								<span name='warn'>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+								<i class="fa" name="yz"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>确认密码</td>
+							<td>
+								<input type="password"  id="repassword"  name="repassword">
+								<span name="hint">请再次输入密码</span>
+								<span name='warn'></span>
+								<i class="fa" name="yz"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>验证码</td>
+							<td class="code">
+								<input type="input" id="identifyingCode" name="identifyingCode " placeholder="请输入验证码">
+								<a id="code"></a>
+								<a >换张图</a>
+								<span name="hint">请填写图片中的字符</span>
+								<span name='warn'></span>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="clause">
+								<input type="checkbox" name="">
+								<span>
+									我已阅读并同意 
+									<a href="">《当当交易条款》</a> 
+									和 
+									<a href="">《当当社区条款》</a>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td >
+								<a class="btn">立即注册</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</form>
+	</section>
+	<script src="js/require/require-min.js" data-main="js/register/register-min.js"></script>
+</body>
+</html>

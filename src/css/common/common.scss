@@ -1,0 +1,76 @@
+/*
+* @Author: ljgoh
+* @Date:   2018-05-10 12:22:44
+* @Last Modified by:   ljgoh
+* @Last Modified time: 2018-05-11 00:39:47
+*/
+
+@charset "utf-8";
+$mainWidth: 960px;
+$font: 12px/18px "\5b8b\4f53",Arial,Helvetica,sans-serif; 
+$font_size_second: 14px;
+$max_width: 100%;
+* {
+	margin: 0;
+	padding: 0;
+	color: #404040;
+    font: $font;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	cursor:pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: red;
+	}
+}
+
+.a_color {
+	$color: #1a66b3;
+	color: $color;
+	&:hover {
+		color: $color;
+		text-decoration: underline;
+	}
+}
+
+.fa {
+	color: red;
+}
+
+.after {
+	&:after {
+		content: '.';
+		height: 0;
+		display: block;
+		clear: both;
+		overflow: hidden;
+	}
+}
+
+.blockCenter {
+	margin: 0 auto;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+
+	.content_wrap {
+		width: 100%;
+
+		.main {
+				width: $mainWidth;
+				@extend .blockCenter;
+			}
+	}
+}

@@ -1,0 +1,1 @@
+define([],function(){return{setCookie:function(e,o,t){const n=new Date;n.setDate(n.getDate()+t),document.cookie=e+" = "+encodeURI(o)+"; expires="+n},getCookie:function(e){const o={};return decodeURI(document.cookie).split(";").forEach(e=>{let t=e.split("=");o[t[0]]=t[1]}),o[e]},removeCookie:function(e){this.setCookie(e,"",-1)}}});

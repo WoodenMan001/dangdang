@@ -1,0 +1,26 @@
+{
+  "name": "dangdang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "woodenman",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+  	"gulp": "*",
+  	"gulp-htmlmin": "*",
+  	"gulp-sass": "*",
+  	"gulp-clean-css": "*",
+    "gulp-minify-css": "*",
+  	"gulp-rename": "*",
+    "gulp-connect-php": "*",
+    "browser-sync": "*",
+    "gulp-minify": "*",
+    "gulp-connect": "*"
+  }
+}
