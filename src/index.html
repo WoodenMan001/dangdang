@@ -2,9 +2,625 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>当当—网上购物中心：图书、母婴、美妆、家居、数码、家电、服装、鞋包等，正品低价，货到付款</title>
+	<link rel="stylesheet" type="text/css" href="css/homePage/index.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
-<body>
+<body class="hp">
+	<header class="content_wrap">
+		<div class="head_img">
+			<div class="main">
+				<a href="">
+					<img src="http://img63.ddimg.cn/2018/5/11/2018051117001936466.jpg">
+				</a>
+			</div>
+		</div>	
+		<div class="head_nav">
+			<div class="main">
+				<div class="nav">
+					<ul>
+						<li>
+							<i class="fa fa-cart-plus"></i>
+							<a href="">购物车</a>
+						</li>
+						<li>
+							<a href="">
+						我的订单</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+						我的订单</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+							我的云书房</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li class="dropDown_obj">
+							<a href="">我的当当
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<div class="drop-down">
+								<ul>
+									<li>
+										<a href="">积分抵现</a>
+									</li>
+									<li>
+										<a href="">我的收藏</a>
+									</li>
+									<li>
+										<a href="">我的余额</a>
+									</li>
+									<li>
+										<a href="">我的评论</a>
+									</li>
+									<li>
+										<a href="">礼券/礼品卡</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+						小说投稿</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+						我要出书</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li class="dropDown_obj">
+							<a href="">企业采购
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<div class="drop-down">
+								<ul>
+									<li>
+										<a href="">大宗采购</a>
+									</li>
+									<li>
+										<a href="">礼品卡</a>
+									</li>
+									<li>
+										<a href="">礼品卡采购</a>
+									</li>
+									<li>
+										<a href="">礼品卡激活</a>
+									</li>
+									<li>
+										<a href="">礼品卡激活</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="bulkhead"></li>
+						<li class="dropDown_obj">
+							<a href="">客户服务
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<div class="drop-down">
+								<ul>
+									<li>
+										<a href="">帮助中心</a>
+									</li>
+									<li>
+										<a href="">自助退款</a>
+									</li>
+									<li>
+										<a href="">自主发货</a>									</li>
+									<li>
+										<a href="">联系客户</a>
+									</li>
+									<li>
+										<a href="">我要投诉</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="bulkhead"></li>
+					</ul>
+					<div>
+						欢迎光临当当，请<a href="login.html">登录</a> 成为会员
+					</div>
+				</div>
+				<div class="head_nav_address dropDown_obj">
+					<a href="">
+						<i class="fa fa-angle-down" aria-hidden="true"></i>
+						<span>送至:</span>
+						<span>北京</span>
+					</a>
+					<ul class="drop-down"></ul>
+				</div>
+			</div>		
+		</div>
+
+		<div class="logo_line_out content_wrap">
+			<div class="main">
+				<div class="logo">
+					<a href=""><img src="http://img61.ddimg.cn/upload_img/00405/luyi/DDlogoNEW.gif"></a>
+				</div>
+				
+				<div class="search">
+			        <form  id="form_search_new">
+			            <label for="key_S" class="label_search" id="label_key" style="visibility: visible; color: rgb(102, 102, 102);">科技图书每满100减50，仅限24小时</label>
+			            <input type="text" class="text gray" name="key" id="key_S" >
+		            	<a class="del-keywords"></a>
+		            	<span class="select">
+			            	<span id="Show_Category_Name fa fa-sort-desc" dd_name="全部分类">全部分类</span>
+			            	<span class="fa fa-sort-desc"></span>
+			                <div id="search_all_category" class="select_pop" dd_name="搜索分类" style="display: none;">
+			                	<!-- height: 286px; padding: 1px; border-width: 1px; -->
+	                			<a dd_name="全部分类"><span>全部分类</span></a>
+	                            <a dd_name="尾品汇"><span>尾品汇</span></a>
+	                            <a dd_name="图书"><span>图书</span></a>
+	                            <a dd_name="电子书"><span>电子书</span></a>
+	                            <a  dd_name="音像"><span>音像</span></a>
+	                            <a  dd_name="影视"><span>影视</span></a>
+	                            <a href="" dd_name="时尚美妆"><span>时尚美妆</span></a>
+	                            <a href=""  dd_name="母婴用品"><span>母婴用品</span></a>
+	                            <a href=""  dd_name="玩具"><span>玩具</span></a>
+	                            <a href=""  dd_name="孕婴服饰"><span>孕婴服饰</span></a>
+	                            <a href=""  dd_name="童装童鞋"><span>童装童鞋</span></a>
+	                            <a href=""  dd_name="家居日用"><span>家居日用</span></a>
+	                            <a href=""  dd_name="家具装饰"><span>家具装饰</span></a>
+	                            <a href=""  dd_name="服装"><span>服装</span></a>
+	                            <a href=""  dd_name="鞋"><span>鞋</span></a>
+	                            <a href="" dd_name="箱包皮具"><span>箱包皮具</span></a>
+	                            <a href="" dd_name="手表饰品"><span>手表饰品</span></a>
+	                            <a href="" dd_name="运动户外"><span>运动户外</span></a>
+	                            <a href="" dd_name="汽车用品"><span>汽车用品</span></a>
+	                            <a href=""  dd_name="食品"><span>食品</span></a>
+	                            <a href=""  dd_name="手机通讯"><span>手机通讯</span></a>
+	                            <a href="" dd_name="数码影音"><span>数码影音</span></a>
+	                            <a href="" dd_name="电脑办公"><span>电脑办公</span></a>
+	                            <a href="" dd_name="大家电"><span>大家电</span></a>
+	                            <a href="" dd_name="家用电器">
+	                            	<span>家用电器</span>
+	                            </a>
+	                        </div>
+		           		</span>
+			            <input type="hidden" id="default_key" value="科技图书每满100减50，仅限24小时">
+			            <input type="submit" id="search_btn" dd_name="搜索按钮" style="display:none">
+			            <input id="SearchFromTop" style="display:none" type="hidden" name="SearchFromTop" value="1">
+			            <input type="button" id="suggest_product_btn" name="suggestproduct_btn" style="display:none" onclick="void(0)">
+			            <input type="button" id="suggest_class_btn" name="suggestclass_btn" style="display:none" onclick="void(0)">
+			            <input type="submit" id="suggest_searchkey_btn" name="suggestsearchkey_btn" style="display:none" dd_name="搜索按钮">
+			            <input type="hidden" id="catalog_S" name="catalog" value="">
+			            <input type="button" class="button" dd_name="搜索按钮">
+			        </form>
+			    </div>
+			    <div class="search_bottom">
+			        <div class="search_hot">
+			        	热搜: <a href="" target="_blank">小熊电器</a>
+			        	<a href="" name="hotword" target="_blank">艺术品热促</a>
+			        	<a href="" name="hotword" target="_blank">巴布豆童鞋</a>
+			        	<a href="" name="hotword" target="_blank">第一推动丛书</a><a href="" name="hotword" target="_blank">杨绛传</a>
+			        	<a href="" name="hotword" target="_blank">尾品汇</a></div>
+			        	<a href="" class="search_advs" target="_blank" name="ddnav_adv_s" dd_name="高级搜索">高级搜索</a>
+			    </div>
+
+				<div class="ddnew_cart">
+					<a href="" name="购物车" dd_name="购物车">
+						<i class="fa fa-cart-plus"></i>
+						购物车
+						<b id="cart_items_count">0</b>
+					</a>
+				</div>
+				<div class="ddnew_order">
+					<a target="_blank" href="" name="我的订单" dd_name="我的订单">
+						我的订单
+						<b id="unpaid_num" style="color:#ff2832;font:bold 12px Arial;"></b>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav_top content_wrap" dd_name="一级导航条">
+	        <ul class="main">
+		        <li class="all">
+		        	<a href="" dd_name="全部商品分类" target="_blank">全部商品分类</a>
+		        </li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">尾品汇</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">图书</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">电子书</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">网络文学</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">服装</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">运动户外</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">孕婴童</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">家居</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">当当优品</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">食品</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href="" target="_blank">Apple</a>
+		       	</li>
+		       	<li>
+		       		<a name="nav1" href=" " target="_blank">电器城</a>
+		       	</li>
+	        </ul>
+	    </div>
+	</header>
 	
+	<section class="content_wrap ">
+		<div class="main cont_body">
+			<div class="new_pro">
+				<div class="home_first_screen">
+					<div class="home_nav_l" dd_name="左侧分类">
+						<div class="new_pub_nav_box" dd_name="左侧分类导航">
+							<div class="new_pub_nav_shadow" id="menu_list">
+								<ul class="new_pub_nav" id="menulist_content">
+									<li class="n_b" dd_name="图书童书" id="li_label_1">
+						                <span class="nav" id="categoryh_1">
+						                    <a name="newcate1" href="" >图书</a>、
+						                    <a name="newcate1"  href="">童书</a>
+						                </span>
+						                <span class="sign"></span>
+						            </li>
+								</ul>
+								<div class="new_pub_nav_pop" style="display: none">
+									<div class="left_box">
+										<div class="new_pub_pop_guan" ><a   dd_name="图书馆" class="">图书馆</a>
+											<a href="" class="">童书馆</a>
+										</div>
+										<ul class="left">
+											<li class="brand_list" >
+												<h4>排行榜</h4>
+												<div class="ph" >
+													<a href="" style="color:#FF0000;">图书畅销榜&nbsp;&gt;&gt;</a>
+													<a style="color:;">新书热卖榜&nbsp;&gt;&gt;</a>
+													<a style="color:;">童书榜&nbsp;&gt;&gt;</a>
+													<a  style="color:;">图书飙升榜&nbsp;&gt;&gt;</a>
+													<a style="color:;">五星图书榜&nbsp;&gt;&gt;</a>
+												</div>
+											</li>
+										</ul>
+										<ul class="left">
+											<li >
+												<h4>
+													<a style="color:;" >科技</a>
+												</h4>
+												<div class="ph" >
+													<a style="color:;" >科普读物</a>
+													<a  style="color:#FF0000;">计算机/网络</a>
+													<a  style="color:;" dd_name="医学">医学</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="home_circle_c">
+						<div class="focus_box_hover lunbo">
+							<div class="btn btn_l" style="left: -46px; z-index: 10;" id="btn_l">left</div>
+							<div class="btn btn_r" style="right: -46px; z-index: 10;" id="btn_r">right</div>
+
+							<div id="slidecontentbox" class="">
+								<ul class="pic">
+									<li>
+										<a href="">
+											<img src="http://img62.ddimg.cn/2018/5/11/2018051115065443219.jpg">
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="http://img63.ddimg.cn/2018/5/11/2018051116125075672.jpg">
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="http://img62.ddimg.cn/2018/5/11/2018051114391869514.jpg">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<ul class="tab">
+								<li>1</li>
+								<li>2</li>
+								<li>3</li>
+							</ul>
+						</div>
+						<div class="tehui_box lunbo">
+							<div class="btn btn_l" style="left: -46px; z-index: 10;" id="btn_l">left</div>
+							<div class="btn btn_r" style="right: -46px; z-index: 10;" id="btn_r">right</div>
+
+							<div id="tehui">
+								<ul class="CBanner" style="width: 12000px; position: absolute; z-index: 9; opacity: 1;">
+									<li>
+										<a href="">
+											<img src="http://img62.ddimg.cn/2018/5/11/2018051117242956542.jpg">
+											<span class="cover"></span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="http://img61.ddimg.cn/2018/5/11/2018051116482359675.jpg">
+											<span class="cover"></span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="http://img63.ddimg.cn/2018/5/11/2018051114365965164.jpg">
+											<span class="cover"></span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="http://img61.ddimg.cn/2018/5/12/2018051200170035359.jpg">
+											<span class="cover"></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="home_notice_r">
+					<div class="home_notice_r_pic">
+						<a href="" class="pic">
+							<img src="http://a.dangdang.com/api/data/cpx/img/39530001/1">
+						</a>
+					</div>
+					<div class="home_notice_gg">
+						<div class="head">
+							<ul class="tab_aa">
+								<li class="on"><span>信息公告</span></li>
+								<li><span>服务公告</span></li>
+							</ul>
+						</div>
+						<div class="tab_content_aa">
+							<div class="content">
+								<div id="logo_content">
+								    <ul id="cxgg_content">
+								      <li>
+								        <a>
+								            <span> 巴布豆童鞋每满100减50</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a >
+								            <span> 科技图书 每满100减50</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a >
+								            <span> 严选520感恩回馈 满199减40</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a >
+								            <span> 茵曼2件8折3件7折</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a>
+								            <span> 5万种童书 5折封顶！</span>
+								        </a>
+								      </li>
+								    </ul>
+								</div>
+							</div>
+							<div class="content">
+								<div id="logo_content">
+								    <ul id="cxgg_content">
+								      <li>
+								        <a>
+								            <span> 5万种童书 5折封顶！</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a >
+								            <span> 茵曼2件8折3件7折</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a >
+								            <span> 严选520感恩回馈 满199减40</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a >
+								            <span> 严选520感恩回馈 满199减40</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a>
+								            <span> 巴布豆童鞋每满100减50</span>
+								        </a>
+								      </li>
+								      <li>
+								        <a >
+								            <span> 科技图书 每满100减50</span>
+								        </a>
+								      </li>
+								    </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="roll_aa lunbo">
+						<div class="btn btn_l" style="left: -46px; z-index: 10;" id="btn_l">left</div>
+						<div class="btn btn_r" style="right: -46px; z-index: 10;" id="btn_r">right</div>
+						
+						<ul class="mix_marquee_tab" style="margin-left: -18px;">
+           					 <li class="current">1</li>
+           					 <li class="">2</li>
+           					 <li class="">3</li>
+           				</ul>
+
+           				<div class="over">
+                            <ul class="list_aa" style="left: 0px;" type="rollbox">
+                                <li type="rollitem">
+                                	<a class=" _1  pic" >
+                                		<img src="http://img63.ddimg.cn/upload_img/00549/wuxian/1234-1518428055.jpg" >
+                                	</a> 
+                                </li>
+                                <li type="rollitem">
+                                	<a class=" _1  pic" ddt-area="10044" href="http://art.dangdang.com/#component_2735524" title="" target="_blank" nname="mixpage-317715-15640_2_1" dd_src="" dd_name="首屏大模块A版_右下banner图_TAB1">
+                                		<img src="http://img63.ddimg.cn/upload_img/00626/sxt03/0410tab-1523347197.jpg" ddt-pit="1">
+                                	</a> 
+                                </li>
+                                <li type="rollitem">
+                                	<a class=" _1  pic" ddt-area="10045" href="http://baby.dangdang.com/new5" 
+                                	title="" target="_blank" nname="mixpage-317715-15640_2_1" dd_src="" dd_name="首屏大模块A版_右下banner图_TAB2">
+                                		<img src="http://img60.ddimg.cn/upload_img/00234/zzh/202x119_new_0427-1524809063.jpg" ddt-pit="1">
+                                	</a> 
+                                </li>
+                            </ul>
+                        </div>
+
+					</div>
+
+				</div>
+				</div>	
+			</div>
+			
+
+			<div class="home_taday_flalsh_box">
+				<div class="con">
+					<div class="home_miaosha">
+						<div class="head">
+		                    <div js="true" class="time" value="4236" >
+		                        <a  class="title" >
+		                        	<img src="http://img63.ddimg.cn/upload_img/00111/home/home_miaosha_title.png">
+		                        </a>
+		                        <span sec="h">00</span>
+		                        <span sec="m">00</span>
+		                        <span sec="s">00</span>
+		                    </div>
+		            		<ul class="chang">
+		            			<li dd_name="00:00场">
+		            				<a dd_name="场次tab">00:00场</a>
+		            			</li>
+		            			<li dd_name="10:00场">
+		            				<a dd_name="场次tab" class="now" >10:00场</a>
+		            			</li>
+		            			<li dd_name="12:00场">
+		            				<a dd_name="场次tab" >12:00场</a>
+		            			</li>
+		            			<li dd_name="17:00场">
+		            				<a dd_name="场次tab" >17:00场</a>
+		            			</li>
+		            			<li dd_name="22:00场">
+		            					<a dd_name="场次tab" >22:00场</a>
+		            			</li>
+		            		</ul>
+		            	</div>
+
+		            	<div class="list">
+		            		<div class="info" >
+		            			<a class="pic">
+		            				<img src="http://img3m9.ddimg.cn/4/11/1232315869-1_l_4.jpg" alt="【超值秒杀 仅此一天】白领公社 防晒袖套 女士新款夏季冰袖冰丝防紫外线户外运动开车骑行冰袖女式手套" ddt-src="1232315869">
+		            			</a>
+		            			<div class="line">
+		            				<span style="width:79%" class="miao_progress_bar"></span>
+		            				<span class="num_bg"></span>
+		            			</div>
+		            			<div class="num">已秒杀79%</div>
+		            			<div class="name">
+		            				<a >【超值秒杀 仅此一天】白领公社 防晒袖套 女士新款夏季冰袖冰丝防紫外线户外运动开车骑行冰袖女式手套</a>
+		            			</div>
+                				<div class="price">
+                					秒杀价：¥<span>9.9</span>
+                					<span class="del">18</span>
+                				</div>
+                			</div>
+		            	</div>
+					</div>
+
+					<div class="firm_week">
+						<div class="head">
+							<ul>
+								<li class="first on" type="bar">
+									<a href="javascript:;"></a>
+								</li>
+								<li class="" type="bar">
+									<a href="javascript:;"></a>
+								</li>
+							</ul>
+							<h3>
+								<span>厂商周</span>
+							</h3>
+						</div>
+
+						<div class="tab_c">
+							<div class="item" style="">
+								<ul class="clearfix" >
+						            <li >
+						                <a  class="pic" >
+						                    <img src="http://img63.ddimg.cn/2018/5/11/2018051114310471077.jpg" data="http://a.dangdang.com/api/data/cpx/img/40660001/1" width="150" height="150" alt="" style="display: block;" ddt-src="http://a.dangdang.com/api/data/cpx/img/40660001/1">
+						                </a>
+						           </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="v_all">
+				<div class="con">
+					<div class="v_header">
+						<a href="" class="v_logo">
+							<img src="http://img58.ddimg.cn/80380032951398_y.png">
+						</a>
+						<a class="v_link">每天10点上新</a>
+					</div>
+
+					<div class="con v_content">
+						<div class="col v_content_left" >
+            				<a class="v_entrance v_entrance_1  pic" d>
+            					<img src="http://img63.ddimg.cn/upload_img/00698/123/PC-5.14-1526003846.jpg" >
+            				</a>         
+            				<div class="v_brand_logo ">
+            					<a class=" _1  pic" >
+            						<img src="http://img58.ddimg.cn/80380042832418_y.jpg" >
+            					</a>         
+            				</div>
+            			</div>
+
+						<div class="col v_content_right">
+							<div class="con v_special_upper">
+				            	<a class=" _1  pic" >
+				            		<img src="http://img52.ddimg.cn/4890038760442_y.jpg" >
+				            	</a>         
+				            </div>
+				        </div>
+
+					</div>	
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<script src="js/require/require-min.js" data-main="js/homePage/homePage-min.js"></script>
 </body>
 </html>

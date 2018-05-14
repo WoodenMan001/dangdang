@@ -2,7 +2,7 @@
  * @Author: ljgoh
  * @Date:   2018-05-11 15:01:29
  * @Last Modified by:   WoodenMan001
- * @Last Modified time: 2018-05-12 17:03:33
+ * @Last Modified time: 2018-05-14 09:06:28
  */
 define(["../common/cookieJar-min"], function(ck) {
 	return {
@@ -29,21 +29,46 @@ define(["../common/cookieJar-min"], function(ck) {
 			this.repassword();
 			//验证码
 			this.identifyingCode();
+			//复选框点击事件
+			this.check();
 			//按钮
 			this.btn();
+		},
+		check: function() {
+			let me = this;
+			let oCheck = document.getElementById('check');
+			let warn = document.querySelectorAll('#check ~span')[1];
+			
+			oCheck.onclick = function() {
+				if(oCheck.checked) {
+					me.setDisplay(warn,'none');
+				} else {
+					me.setDisplay(warn,'block');
+				}
+			}
 		},
 		btn: function() {
 			let me = this;
 			let btn = document.getElementById('btn');
 			let inputs = document.querySelectorAll('input');
-			console.log(inputs)
+			
 			btn.onclick = function() {
-				me.isClick = true;
-
 				inputs.forEach((item,i) => {
-					if(i != inputs.length - 1)
+					me.isClick = true;
+					if(i != inputs.length - 1) {
 						item.onblur();
-				})
+
+						if(item.getAttribute('id') == 'repassword') {
+							let warn = item.offsetParent.children[1];
+							warn.innerHTML = '登录密码不能为空';
+						} else if(item.getAttribute('id') == 'password') {
+							let warn = item.offsetParent.children[1];
+							warn.innerHTML = '密码不能为空';
+						}
+					}
+				});
+
+				me.isClick = false;
 			}
 
 		},
@@ -62,7 +87,7 @@ define(["../common/cookieJar-min"], function(ck) {
 
 				if(val != codeCk) {
 					me.setDisplay(warn,"block");
-					warn.innerHTML = '换张图 图形验证码输入错误，请重新输入';
+					warn.innerHTML = '图形验证码输入错误，请重新输入';
 					me.modifyState_false(eles);
 				} else {
 					me.judgeArr[oInput.getAttribute('id')] = true;
@@ -74,7 +99,7 @@ define(["../common/cookieJar-min"], function(ck) {
 			let me = this;
 			let oInput = document.getElementById('repassword');
 			let eles = [...oInput.offsetParent.children];
-			let warn = eles[2];
+			let warn = eles[1];
 
 			oInput.onblur =  function() {
 				let val = oInput.value;
@@ -83,7 +108,7 @@ define(["../common/cookieJar-min"], function(ck) {
 					return;
 
 				//判断两次密码是否一致
-				if(val != oPwV) {
+				if(val != oPwV || me.isClick) {
 					me.setDisplay(warn,"block");
 					warn.innerHTML = '两次输入的密码不一致，请重新输入';
 					me.modifyState_false(eles);
@@ -106,14 +131,15 @@ define(["../common/cookieJar-min"], function(ck) {
 			let oSpans = [...oSpan.children];
 			let eles = [...oPw.offsetParent.children];
 			let upperCaseSpan = document.querySelector('span.upperCase');
+			let num = 0;
 			//实时判断输入结果
 			oPw.oninput = function() {
 				let val = oPw.value;
 				let lastValCode = '';
-				let num = 0;
+				num = 0;
 
 				//判断内容是否为空
-				if (!me.valIsNull(oPw, eles) && !me.isClick) return;
+				if (!me.valIsNull(oPw, eles)) return;
 				//获取输入元素的charcodeAt
 				lastValCode = val[val.length-1].charCodeAt();
 				//获取reg验证结果
@@ -130,6 +156,7 @@ define(["../common/cookieJar-min"], function(ck) {
 					me.setDisplay(upperCaseSpan,"block");
 				} else if (num) {
 					//判断密码强度
+					// me.intensity(oSpan,oSpans,num);
 					me.setDisplay(oSpan,'block');
 					oSpans.forEach((it, i) => {
 						if (i == 3) {
@@ -150,13 +177,20 @@ define(["../common/cookieJar-min"], function(ck) {
 			//失去焦点，判断长度是否小于6
 			oPw.onblur = function() {
 				//判断内容是否为空
-				if (!me.valIsNull(oPw, eles)) return;
+				if (!me.valIsNull(oPw, eles)  && !me.isClick) return;
 				if(oPw.value.length < 6) {
+					me.setDisplay(warnSpan,'block');
+					warnSpan.innerHTML = '密码长度6-20个字符，请重新输入';
 					me.modifyState_false(eles);
 				} else {
 					me.modifyState_true(eles);
+					me.setDisplay(oSpan,"block");
 				}
 			}
+		},
+		//判断密码强度
+		intensity: function(oSpan,oSpans,num,) {
+			
 		},
 		//手机验证
 		tel: function() {

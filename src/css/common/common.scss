@@ -1,8 +1,8 @@
 /*
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:44
-* @Last Modified by:   ljgoh
-* @Last Modified time: 2018-05-11 00:39:47
+* @Last Modified by:   WoodenMan001
+* @Last Modified time: 2018-05-14 20:28:18
 */
 
 @charset "utf-8";
@@ -19,14 +19,39 @@ $max_width: 100%;
 
 li {
 	list-style: none;
+
+	&.bulkhead {
+	padding: 0;
+    width: 1px;
+    height: 24px;
+    line-height: 24px;
+    background: url(https://login.dangdang.com/images/unite_header_bg_1101.gif) no-repeat 0 -105px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+	}
 }
 
+.con {
+	clear:both;
+	zoom:1;
+}
 a {
 	cursor:pointer;
 	text-decoration: none;
 
 	&:hover {
 		color: red;
+	}
+}
+
+.a_hover_red {
+	cursor:pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: red!important;
+		text-decoration: underline;
 	}
 }
 
@@ -64,13 +89,15 @@ a {
 html, body {
 	width: 100%;
 	height: 100%;
-
-	.content_wrap {
-		width: 100%;
-
-		.main {
-				width: $mainWidth;
-				@extend .blockCenter;
-			}
-	}
 }
+
+.content_wrap {
+	width: 100%;
+
+	.main {
+			width: $mainWidth;
+			@extend .blockCenter;
+		}
+}
+
+

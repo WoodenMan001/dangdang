@@ -2,13 +2,30 @@
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-12 15:56:48
+* @Last Modified time: 2018-05-14 11:06:32
 */
 
-@import '../common/common';
+@import '../common/head';
 
 body {
 	background: #f6f9fb;
+}
+
+div.content_warn {
+	@extend .blockCenter;
+	width: 670px;
+	padding: 5px 0;
+	margin-bottom: 8px;
+	line-height: 24px;
+	background: #fef7f5; 
+
+	.fa {
+		font-size: 15px;
+	}
+	
+	a {
+		@extend .a_color;
+	}
 }
 
 /*register*/
@@ -22,64 +39,10 @@ header.rs .main {
 	.header_nav>ul>li,div.logo {
 		float:left;
 	}
-
 	div.header_nav {
-		width: 788px;
-		margin-top:5px;
-		
-		&,ul,p {
-			float: right;
-		}
-
-		li:hover>a {
-			text-decoration: underline;
-		}		
-		ul.nav>li {
-			border: 1px solid #fff;
-			position: relative;
-			a {
-				padding: 0 10px;
-				border: 1px solid #fff;
-			}
-
-			&.icon:hover {
-				border: 1px solid red;
-				& >a,
-				& .fa {
-					color: red;
-					text-decoration: none;
-				}
-			}
-
-			&.bulkhead {
-		        padding: 0;
-			    width: 1px;
-			    height: 21px;
-			    background: url(https://login.dangdang.com/images/unite_header_bg_1101.gif) no-repeat 0 -105px;
-			    font-size: 0;
-			    line-height: 0;
-			    overflow: hidden;
-			}
-
-			&.icon .fa {
-				position: relative;
-				top: -3px;
-				color: #949493;
-			}
-		}
-
-		p {
-		    display: inline;
-		    padding: 2px 10px 0 0;
-		    width: 450px;
-		    height: 19px;
-			text-align: right;
-
-			a {
-		    	@extend .a_color;
-			}
-		}
+		@extend .header_nav;
 	}
+	
 	//下拉框样式
 	div.drop-down {
 		display: none;
@@ -194,23 +157,6 @@ section.rs .main {
 	//主要内容
 	.content {
 		padding: 45px 0 25px;
-
-		&>div {
-			@extend .blockCenter;
-			width: 670px;
-			padding: 5px 0;
-			margin-bottom: 8px;
-			line-height: 24px;
-			background: #fef7f5; 
-
-			.fa {
-				font-size: 15px;
-			}
-			
-			a {
-				@extend .a_color;
-			}
-		}
 	}
 
 	.content_form tr {
@@ -247,7 +193,13 @@ section.rs .main {
 		
 		&:last-child {
 			position: relative;
-			text-align: left;
+			text-align: left;    
+			width: 400px;
+
+			input {
+				float: left;
+				margin-right: 5px;
+			}
 		}
 
 		&:not(.clause) input {
@@ -269,7 +221,8 @@ section.rs .main {
 		    color: #505050;
     		border-color: #969696;
 		}
-
+		
+		span[name='warn'],
 		&:not(.clause) span {
 		    position: absolute;
 			display: none;
@@ -363,3 +316,100 @@ section.rs .main {
 		color: #fff;
 	}
 }
+
+/* login */
+.lg {
+	background: #fff;
+}
+.lg >header .main {
+	padding-top: 10px;
+    height: 71px;
+    color: #404040;
+
+    .suggest {
+    	height: 16px;
+		float: right;
+		margin-top: 40px;
+
+		&>* {
+			color: #787878;
+			line-height: 16px;
+		}
+
+		&:hover a {
+			text-decoration: underline;
+		}
+
+		i {
+			font-size: 16px;
+		}
+	}
+}
+
+.lg >section {
+	background: url(https://login.dangdang.com/p/get_login_ad.php) no-repeat center center;
+	height: 590px;
+
+	.toLogin {
+		background: #fff;
+	    padding: 15px 25px 15px 15px;
+	    float: right;
+	    width: 320px;
+	    color: #6e6e6e;
+	    margin: 90px auto 0;
+	    position: relative;
+	    border: 1px solid #eef2f4;
+	    box-shadow: 0px 1px 2px #eee;
+
+		.form {
+			position: relative;
+			padding: 15px;
+		}
+	    .content_warn {
+	    	display: block;
+		    width: 355px;
+		    height: 24px;
+		    right: -1px;
+		    top: -27px;
+		    line-height: 24px;
+		    color: #828282;
+		    padding-left: 5px;
+		    background: url(https://login.dangdang.com/images/new_tip.png) 3px 5px no-repeat #fef7f5;
+		    border: 1px solid #fedbd1;
+		    position: absolute;
+	    }
+
+	    .swith_codeImg {
+	    	background: url(https://login.dangdang.com/images/scan_icon.png);
+		    display: block;
+		    width: 55px;
+		    height: 55px;
+		    position: absolute;
+		    right: -15px;
+		    top: 7px;
+
+		    z-index: 10;
+	    }
+
+	    .hint {
+	    	position: absolute;
+		    top: 7px;
+		    right: 48px;
+		    border: 1px solid #fedbd1;
+		    background-color: #fef7f5;
+		    color: #ff572a;
+		    padding: 4px 6px;
+
+		    span.icon {
+		    	background: url(https://login.dangdang.com/images/arrow_right_icon.png) no-repeat;
+			    display: inline-block;
+			    width: 12px;
+			    height: 12px;
+			    position: absolute;
+			    right: -12px;
+			    top: 6px;
+		    }
+	    }
+	}
+}
+
