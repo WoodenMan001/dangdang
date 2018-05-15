@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-14 10:43:20
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-14 21:25:53
+* @Last Modified time: 2018-05-15 11:44:22
 */
 @import '../common/head';
 .content_wrap .main {
@@ -75,6 +75,7 @@ header {
 	    			text-align: center;
 	    			position: relative;
 	    			top: -1px;
+	    			background: #fff;
 	    		}
 
 	    		&.bulkhead {
@@ -91,6 +92,9 @@ header {
 			    line-height: 21px;
 			    position: relative;
 			    z-index: 100;
+			    a {
+			    	color: red;
+			    }
 	    	}  
 	    }
 
@@ -605,34 +609,6 @@ header {
 				width: 202px;
     			overflow: hidden;
 
-    			 .tab_aa {
-				    border-top: 1px solid #e6e6e6;
-				    height: 29px;
-				    overflow: hidden;
-				    width: 204px;
-				}
-
-				.tab_aa li {
-				    margin-left: -1px;
-				    float: left;
-				    width: 101px;
-				    border: 1px solid #e6e6e6;
-				    border-top: 0;
-				    height: 28px;
-				    background-color: #f0f0f0;
-				    cursor: default;
-				    font: 14px/29px "Microsoft Yahei";
-				    text-align: center;
-				    color: #646464;
-				    overflow: hidden;
-
-				    &.on {
-					    background-color: #fff;
-					    border-bottom: 0;
-					    padding-bottom: 1px;
-				    }
-				}
-
 				.tab_content_aa {
 					width: 202px;
 				    height: 142px;
@@ -658,7 +634,7 @@ header {
 
 				    a {
 				    	display: block;
-					    padding-left: 10px;
+					    padding-left: 0;
 					    color: #646464;
 					    font-family: "Microsoft Yahei";
 				    }
@@ -1190,95 +1166,569 @@ header {
 				    }
 				}
 
-				.tab_content_aa {
-				    width: 202px;
-				    height: 142px;
-				    position: relative;
-				    border-bottom: 1px solid #e6e6e6;
-				    overflow: hidden;
-
-				    ul {
-				    	height: 130px;
-					    width: 202px;
-					    overflow: hidden;
-					    padding-top: 6px;
-				    }
-
-				    li {
-			    	    line-height: 25px;
-					    padding-left: 10px;
-					    width: 183px;
-					    height: 25px;
-					    background: url(http://img60.ddimg.cn/upload_img/00111/home/home_sprite_1507.png) no-repeat 10px -188px;
-					    overflow: hidden;
-				    }
-
-				    a {
-			    	    display: block;
-					    padding-left: 10px;
-					    color: #646464;
-					    font-family: "Microsoft Yahei";
-
-					    &:hover span{
-							color: red;
-					    }
-				    }
-				}
 			}
 
-			.roll_aa {
-			    width: 202px;
-			    height: 119px;
-			    position: relative;
+			
+		}
+	}
+
+	.book_new {
+		height: 519px;
+	    height: 499px;
+	    overflow: hidden;
+	    position: relative;
+	    margin: 0 auto 30px;
+	}
+
+	.book_new .home_screen_head{
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    overflow: hidden;
+	    width: 910px;
+	    height: 44px;
+	    border-bottom: 2px solid #000;
+	    color: #323232;
+	    font: bold 20px/44px "Microsoft YaHei";
+
+	    a {
+	    	font-size: 18px;
+	    	font-weight:900;
+	    	color: #323232;
+		    text-decoration: none;
+		    cursor: pointer;
+	    }
+	}
+
+	.book_new .tab_box_aa{
+		position: absolute;
+	    top: 56px;
+	    left: 0;
+	    width: 910px;
+	    height: 443px;
+	}
+
+	.book_new .tab_box_aa .head {
+	    height: 44px;
+	    width: 655px;
+	    border-right: 1px solid #e6e6e6;
+	    position: absolute;
+	    top: -56px;
+	    right: 0;
+
+	    .tab_aa_new {
+	    	float: right;
+	    }
+		
+		li {
+			float: left;
+		    width: 114px;
+		    height: 42px;
+		    padding-top: 1px;
+		    border: 1px solid #e6e6e6;
+		    border-width: 1px 0 0 1px;
+		    text-align: center;
+		    background-color: #f5f5f5;
+		    font: 14px/42px "Microsoft YaHei";
+		    color: #646464;
+		    cursor: default;
+		    overflow: hidden;
+		}
+		
+		li.first {
+			margin-right: 0;
+		}
+
+	    li.on {
+	    	font-weight: bold;
+		    background-color: #fff;
+		    width: 112px;
+		    border: 2px solid #000;
+		    border-bottom: 0;
+		    padding: 0 0 2px 0;
+		    margin-bottom: -2px;
+		    color: #525252;
+	    }
+	}
+
+	.book_new .content_aa {
+		border-top: 1px solid #e6e6e6;
+	    border-bottom: 1px solid #e6e6e6;
+	    width: 910px;
+	    height: 441px;
+	    overflow: hidden;
+	    position: relative;
+	}
+
+	.tab_content_aa {
+		border-top: 1px solid #e6e6e6;
+	    border-bottom: 1px solid #e6e6e6;
+	    width: 910px;
+	    height: 441px;
+	    overflow: hidden;
+	    position: relative;
+
+	    .con a.pic {
+	    	padding-left: 0px;
+	    }
+	}
+
+	.book_new .book_left_pic {
+		width: 238px;
+	    height: 441px;
+	    border: 1px solid #e6e6e6;
+	    border-width: 0 1px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    display: block;
+	    overflow: hidden;
+	    text-align: center;
+	}
+
+	.book_new .book_tab_img {
+		position: absolute;
+	    bottom: 0;
+	    left: 1px;
+	    width: 237px;
+	    padding-left: 1px;
+	    background-color: #fff;
+	    background: url(http://img63.ddimg.cn/upload_img/00111/home/home_bg_1509.png) 0 0;
+
+	    li {
+			float: left;
+		    width: 63px;
+		    height: 28px;
+		    line-height: 28px;
+		    padding-left: 16px;
+		    overflow: hidden;
+		    background: none;
+		}
+	}
+
+	.book_new .roll_aa {
+	    width: 335px;
+	    height: 220px;
+	    border-right: 1px solid #e6e6e6;
+	    border-bottom: 1px solid #e6e6e6;
+	    top: 0;
+	    left: 240px;
+	    overflow: hidden;
+	    position: absolute;
+	}
+
+	.btn {
+		top: 75px;
+	}
+	
+	.tab_content_aa ul.mix_marquee_tab {
+		height: 3px;
+
+	}
+	.book_new .mix_marquee_tab {
+		position: absolute;
+		bottom: 6px;
+		left:50%;
+		z-index: 666;
+
+		li {
+			float: left;
+		    width: 10px;
+		    height: 3px;
+		    margin-right: 4px;
+		    _display: inline;
+		    font-size: 0;
+		    line-height: 9px;
+		    overflow: hidden;
+		    background: #fff;
+		}
+	}
+
+	.book_new .over {
+		width: 335px;
+		height: 220px;
+
+		ul{
+			height: 100%;
+		}
+
+		li {
+			float: left;
+
+
+		    img {
+		    	width: 335px;
+		    	height: 220px;
+		    }
+		}
+	}
+
+	.book_new .roll_aa .over li, .book_new .roll_aa .over li a {
+		padding: 0;
+	    width: 335px;
+	    height: 220px;
+	    display: block;
+	    overflow: hidden;
+	    text-align: center;
+	}
+
+	.book_new .book_upper2  {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    width: 334px;
+	    height: 220px;
+	    overflow: hidden;
+	    border-bottom: 1px solid #e6e6e6;
+
+	    
+	}
+ 	
+ 	.book_new .book_lower4 {
+ 		position: absolute;
+	    top: 221px;
+	    right: 0;
+	    width: 668px;
+	    height: 220px;
+	    overflow: hidden;
+ 	}
+
+ 	.book_new .book_upper2 ul,
+ 	.book_new .book_lower4 ul {
+	    	float: left;
+	    	width: 166px;
+	    	height: 220px;
+	    	border-right: 1px solid #e6e6e6;
+	    	position: relative;
+			
+
+			li {
+				width: 166px;
+		    	height: 220px;
+		    	padding:0;
+		    	background: #fff;
+			}
+
+	    	.img {
+	    		display: block;
+	    		width: 150px;
+	    		height: 150px;
+	    		overflow: hidden;
+	    		text-align: center;
+	    		margin:7px auto 0;
+	    	}
+
+	    	.name {
+	    		height: 16px;
+			    line-height: 16px;
+			    width: 150px;
+			    margin: 5px auto 0;
 			    overflow: hidden;
 
-			    .mix_marquee_tab {
-				    position: absolute;
-				    bottom: 10px;
-				    left: 50%;
-				    text-align: center;
-				    z-index: 30;
+	    		p {
+	    			color: #646464;
+	    		}
+	    	}
 
-				    li {
-						float: left;
-					    width: 8px;
-					    height: 8px;
-					    border-radius: 8px;
-					    background: #c8c8c8;
-					    overflow: hidden;
-					    font-size: 0;
-					    line-height: 24px;
-					    margin: 0 6px 0 0;
+	    	.price {
+	    		width: 150px;
+	    		margin: 5px auto 0;
+				
+
+	    		.rob {
+	    			color: #ff2832;
+				    font: 14px Arial;
+				    display: inline-block;
+				    margin-right: 10px;
+				    padding-left: 10px;
+
+				    span {
+	    				color: #ff2832;
+				    }
+	    		}
+
+	    		.price_r {
+					font:12px Arial;
+					color: #969696;
+					text-decoration: line-through;
+					span {
+						color:#969696;
+					}
+	    		}
+
+	    		.ebookprice_n {
+	    			display: block;
+				    font: 12px Arial;
+				    padding: 4px 0 0 0;
+				    color: #787878;
+	    		}
+	    	}
+	 }
+
+
+	.book_new .floor_tab_bang {
+		width: 278px;
+	    height: 497px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    border: 1px solid #e6e6e6;
+	    overflow: hidden;
+	    .header {
+	    	width: 280px;
+	    	height: 46px;
+
+	    	ul {
+	    		width: 280px;
+    			height: 46px;
+
+    			li {
+    				float: left;
+    				width: 138px;
+    				height: 46px;
+
+    				line-height: 46px;
+
+    			}
+
+	    	}
+	    }
+
+	    .tab_content_aa .book_top {
+			padding-top: 10px;
+
+			ul {
+				height: 429px;
+				width: 278px;
+				overflow: hidden;
+			}
+
+			li {
+				border-bottom: 1px solid #e5e5e5;
+				width: 278px;
+				clear: both;
+				vertical-align: top;
+
+				&.bar {
+					height: 32px;
+					line-height: 32px;
+				}
+
+				&.linel .num  {
+					color: #ff3228;
+					font-weight: bold;
+				}
+
+				.num {
+					float: left;
+					width: 25px;
+					height: 33px;
+					font: 12px/33px Arial;
+					padding-left: 15px;
+					background: #fff;
+					margin-bottom: -1px;
+					overflow: hidden;
+				}
+
+				.name {
+					float: left;
+					width: 140px;
+					height: 32px;
+					line-height: 32px;
+					overflow: hidden;
+
+					a {
+						line-height: 20px;
 					}
 				}
 
-			    .btn {
-			    	top: 20px;
-			    }
-
-				.over {
-					width: 202px;
-				    height: 119px;
-				    overflow: hidden;
-
-				    ul {
-			    	    width: 10000px;
-						position: relative;
-				    }
-
-				    li {
-			    	    width: 10000px;
-		    			position: relative;
-				    }
-
-				    img  {
-				    	width: 202px;
-				    	height: 119px;
-				    	overflow: hidden;
-				    }
+				a span {
+					color: #969696;
+					display: block;
 				}
 
-				
+				a:hover {
+					color: red;
+				}
+			}
+
+			li.item {
+				height: 132px;
+
+				.num {
+					height: 133px;
+
+				}
+			}
+	    }
+	}
+
+	.dd_brand {
+		width: 1200px;
+		margin: 0 auto 30px;
+		height: 385px;
+
+		.dd_brand_head {
+			height: 42px;
+			font:bold 20px/24px "Microsoft YaHei";
+			color: #323232;
+			
+
+			a:hover {
+		    	color: #ff2832!important;
+		    }
+
+			.dd_brand_head_title {
+				float: left;
+			    margin: 11px 0 7px;
+			    padding: 0 20px 0 6px;
+			    font: bold 20px/24px "Microsoft YaHei";
+			    border-right: 1px solid #b7b7b7;
+			    text-decoration: none;
+			    background: #fff;
+			    color: #323232;
+			}
+
+			.list_aa {
+				float: left;
+				height: 42px;
+				overflow: hidden;
+
+				li {
+					float: left;
+				    padding: 0 30px;
+				    margin: 13px 0 0 -13px;
+				    background: url(http://img63.ddimg.cn/upload_img/00111/home/title_bg.png) no-repeat left 3px;
+				    font: 16px/20px "Microsoft YaHei";
+
+				    a {
+						font: bold 16px/20px "Microsoft YaHei";
+					    text-decoration: none;
+					    color: #323232;
+				    }
+				}
+			}
+		}
+
+		.dd_brand_content {
+			border: 1px solid #e6e6e6;
+			border-width: 1px 0 0 1px;
+			position: relative;
+			width: 1199px;
+			height: 342px;
+
+			.dd_brand_content_l {
+				float: left;
+				position: absolute;
+				top:0;
+				left:0;
+				width: 400px;
+			}
+
+			.dd_brand_content_l a,
+			.dd_brand_content_r a {
+				float: left;
+				width: 199px;
+				height: 170px;
+				overflow: hidden;
+				border: 1px solid #e6e6e6;
+				border-width: 0 1px 1px 0;
+			}
+
+			.dd_brand_content_m {
+				float: left;
+				position: absolute;
+				top:0;
+				left: 400px;
+				border: 1px solid #e6e6e6;
+				border-width:  0 1px 1px 0;
+				height: 341px;
+				overflow: hidden;
+
+				a {
+					display: block;
+					width: 398px;
+					height: 100%;
+				}
+
+			}
+
+			.dd_brand_content_r {
+				float: left;
+				position: absolute;
+				top:0;
+				left:799px;
+				width: 400px;
+			}
+
+		}
+	}
+	
+	.home_screen_cai {
+		width: 1200px;
+		margin: 0 auto 30px;
+
+		.head {
+			height: 34px;
+		    padding-left: 5px;
+		    border-bottom: 2px solid #ff3228;
+
+		    span {
+		    	color: #ff2832;
+			    font: bold 20px "Microsoft YaHei";
+		    }
+		}
+
+		.tab_c {
+			border: 1px solid #e6e6e6;
+			width: 1198px;
+			margin: 10px auto 0;
+			overflow: hidden;
+			padding: 10px 0 15px;
+			background: url(http://img63.ddimg.cn/upload_img/00111/gg/guanggao02.png) no-repeat right bottom;
+
+			ul {
+				padding-left: 5px;
+    			width: 1188px;
+			}
+			li {
+				float: left;
+			    width: 190px;
+			    height: 258px;
+			    padding: 4px 3px 7px;
+			    border: 1px solid #fff;
+			}
+		}
+
+		.pic {
+			display: block;
+		    width: 190px;
+		    height: 190px;
+		    overflow: hidden;
+		    margin: 0 auto;
+
+		    img {
+		    	width: 190px;
+		    	height: 190px;
+		    }
+		}
+
+		.name {
+			width: 190px;
+			height: 32px;
+			line-height: 16px;
+			padding: 8px 0 0;
+			margin-bottom: 5px;
+			overflow: hidden;
+		}
+
+		.price {
+			font:18px Arial;
+			color:#ff2832;
+			position: relative;
+
+			span {
+				color:#ff2832;
 			}
 		}
 	}
@@ -1312,4 +1762,119 @@ header {
 	}
 }
 
+.roll_aa {
+    width: 202px;
+    height: 119px;
+    position: relative;
+    overflow: hidden;
 
+    .mix_marquee_tab {
+	    position: absolute;
+	    bottom: 10px;
+	    left: 50%;
+	    text-align: center;
+	    z-index: 30;
+
+	    li {
+			float: left;
+		    width: 8px;
+		    height: 8px;
+		    border-radius: 8px;
+		    background: #c8c8c8;
+		    overflow: hidden;
+		    font-size: 0;
+		    line-height: 24px;
+		    margin: 0 6px 0 0;
+		}
+	}
+
+    .btn {
+    	top: 20px;
+    }
+
+	.over {
+		width: 202px;
+	    height: 119px;
+	    overflow: hidden;
+
+	    ul {
+    	    width: 10000px;
+			position: relative;
+	    }
+
+	    li {
+    	    width: 10000px;
+			position: relative;
+	    }
+
+	    img  {
+	    	width: 202px;
+	    	height: 119px;
+	    	overflow: hidden;
+	    }
+	}
+}
+
+.tab_aa {
+    border-top: 1px solid #e6e6e6;
+    height: 29px;
+    overflow: hidden;
+    width: 204px;
+}
+
+.tab_aa li {
+    margin-left: -1px;
+    float: left;
+    width: 101px;
+    border: 1px solid #e6e6e6;
+    border-top: 0;
+    height: 28px;
+    background-color: #f0f0f0;
+    cursor: default;
+    font: 14px/29px "Microsoft Yahei";
+    text-align: center;
+    color: #646464;
+    overflow: hidden;
+
+    &.on {
+	    background-color: #fff;
+	    border-bottom: 0;
+	    padding-bottom: 1px;
+    }
+}
+
+
+.tab_content_aa {
+    width: 202px;
+    height: 142px;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+
+    ul {
+    	height: 130px;
+	    width: 202px;
+	    overflow: hidden;
+	    padding-top: 6px;
+    }
+
+    li {
+	    line-height: 25px;
+	    padding-left: 10px;
+	    width: 183px;
+	    height: 25px;
+	    background: url(http://img60.ddimg.cn/upload_img/00111/home/home_sprite_1507.png) no-repeat 10px -188px;
+	    overflow: hidden;
+    }
+
+    a {
+	    display: block;
+	    padding-left: 10px;
+	    color: #646464;
+	    font-family: "Microsoft Yahei";
+
+	    &:hover span{
+			color: red;
+	    }
+    }
+}
