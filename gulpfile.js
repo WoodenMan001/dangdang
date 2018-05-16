@@ -1,8 +1,8 @@
 /*
 * @Author: ljgoh
 * @Date:   2018-05-08 13:43:50
-* @Last Modified by:   ljgoh
-* @Last Modified time: 2018-05-12 10:38:09
+* @Last Modified by:   WoodenMan001
+* @Last Modified time: 2018-05-15 18:03:57
 */
 const dist = 'dist';//目标目录
 const src = 'src';//编译目录
@@ -17,18 +17,28 @@ var gulp = require("gulp"),
 
 //将sass转译为css,并压缩
 gulp.task("pro-sass",function() {
-	gulp.src(src+"/css/**/*.scss")
+	gulp.src(src+"/scss/**/*.scss")
 		.pipe(sass())
-        .pipe(rename({suffix: '.min'}))
+        // .pipe(rename({suffix: '.min'}))
         .pipe(cleanCss())
 		.pipe(gulp.dest( dist + "/css"))
         .pipe(connect.reload());
 });
 
+gulp.task("pro-sass-src",function() {
+    gulp.src(src+"/scss/**/*.scss")
+        .pipe(sass())
+        // .pipe(rename({suffix: '.min'}))
+        // .pipe(cleanCss())
+        .pipe(gulp.dest( src + "/css"))
+        .pipe(connect.reload());
+});
+
+
 gulp.task("pro-sasss",function() {
     gulp.src(src+"/css/fontcss/*.scss")
         .pipe(sass())
-        .pipe(rename({suffix: '.min'}))
+        // .pipe(rename({suffix: '.min'}))
         .pipe(cleanCss())
         .pipe(gulp.dest( dist + "/css"))
         .pipe(connect.reload());
@@ -86,22 +96,34 @@ gulp.task("copyImg",function() {
 
 gulp.task("copy",["copyFont","copyPhp","copyImg"]);
 
+
+gulp.task("copyCss",function() {
+    return gulp.src(src+'/scss/**/*.css')
+                .pipe(gulp.dest(src+'/css'))
+})
 //定义看守任务
+// gulp.task("watch",function() {
+// 	gulp.watch(src+"/css/**/*",['pro-sasss','pro-sass']);
+
+// 	gulp.watch(src+"/*.html",['pro-htmlmin']);
+
+// 	gulp.watch(src+"/js/**/*.js",['pro-minifyJS']);
+
+//     gulp.watch(src+"/fonts/*",['copyFont']);
+
+//     gulp.watch(src+"/php/*",['copyPhp']);
+
+//     gulp.watch(src+"/img/*",['copyImg']);
+// });
+
 gulp.task("watch",function() {
-	gulp.watch(src+"/css/**/*",['pro-sasss','pro-sass']);
-
-	gulp.watch(src+"/*.html",['pro-htmlmin']);
-
-	gulp.watch(src+"/js/**/*.js",['pro-minifyJS']);
-
-    gulp.watch(src+"/fonts/*",['copyFont']);
-
-    gulp.watch(src+"/php/*",['copyPhp']);
-
-    gulp.watch(src+"/img/*",['copyImg']);
+    gulp.watch(src+"/scss/**/*",['copyCss','pro-sass-src']);
 });
 
+// gulp.task("default",["pro-sasss","pro-sass","pro-minifyJS","pro-htmlmin","connect","copy","watch"],function() {
+//     console.log("Gulp 启动成功！")
+// })
 
-gulp.task("default",["pro-sasss","pro-sass","pro-minifyJS","pro-htmlmin","connect","copy","watch"],function() {
+gulp.task("default",["copyCss","pro-sass-src","watch"],function() {
     console.log("Gulp 启动成功！")
 })
