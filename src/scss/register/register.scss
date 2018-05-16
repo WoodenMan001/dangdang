@@ -2,7 +2,7 @@
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-14 11:06:32
+* @Last Modified time: 2018-05-16 16:22:09
 */
 
 @import '../common/head';
@@ -166,12 +166,12 @@ section.rs .main {
 		i[name="yz"] {
 			position: absolute;
 			display: none;
-			right: -15px;
+			right: 64px;
 			top: 13px;
 		}
 
 		.code i[name="yz"] {
-			right: 150px;
+			right: 230px;
 		}
 	}
 	.content_form td {
@@ -410,6 +410,336 @@ section.rs .main {
 			    top: 6px;
 		    }
 	    }
+		
+		.form_content {
+			position:relative;
+			top: 30px;
+		}
+
+	    .form_content p{
+    	    font-size: 18px;
+		    color: #3c3c3c;
+		    margin-top: 5px;
+	    }
+
+	    .form_username {
+    		margin-top: 20px;
+    		position: relative;
+	    }
+
+	    .form_content >div> input {
+    	    background: none;
+		    position: absolute;
+		    z-index: 20;
+		    color: rgb(176, 176, 176);
+		    width: 270px;
+		    height: 34px;
+		    font-size: 13.3333px;
+		    padding-left: 0px;
+		    font-family: "Microsoft Yahei";
+		    top: 0px;
+		    left: 40px;
+		    line-height: 34px;
+		    display: block;
+	    }
+	}
+	
+	.infro {
+	    width: 311px;
+    	float: right;
+	}
+	.infro {
+		position: relative;
+		
+		
+		.username, 
+		.password, 
+		.code {
+		    height: 36px;
+		    border: 1px solid #e6e6e6;
+		    width: 310px;
+		    border-radius: 2px;
+		    position: relative;
+		}
+		.username input,
+		.infro .password input {
+		    width: 270px;
+		}
+
+		.username input, 
+		.password input, 
+		.code input {
+		    float: left;
+		    height: 34px;
+		    line-height: 34px;
+		    border: 0;
+		    color: #333;
+		    font-family: "Microsoft Yahei";
+		    padding: 0;
+		    outline: none;
+		}
+
+
+		.password_login {
+			font-size: 18px;
+		    color: #3c3c3c;
+		    margin-top: 5px;
+		}
+		
+		.text_del {
+		    width: 10px;
+		    height: 11px;
+		    display: block;
+		    top: 12px;
+		    left: 290px;
+		    position: absolute;
+		    background: url(https://login.dangdang.com/images/icon_20150706.png) 0 -230px no-repeat;
+		}
+
+		.infro .replacetype01 {
+		    position: absolute;
+		    top: 44px;
+		    right: 0;
+		}
+		
+		.username span, 
+		.password span,
+		.code span {
+		    width: 30px;
+		    margin-right: 10px;
+		    height: 36px;
+		    float: left;
+		    background: url(https://login.dangdang.com/images/icon_20150706.png) 10px -110px no-repeat;
+		}
+
+		.username {
+			margin-top: 20px;
+			position: relative;
+
+			>span {
+				display: block;
+			    width: 30px;
+			    margin-right: 10px;
+			    height: 36px;
+			    float: left;
+			    background: url(https://login.dangdang.com/images/icon_20150706.png) 10px -110px no-repeat;
+			}
+		}
+		.tips {
+		    height: 30px;
+		    line-height: 30px;
+		    padding-left: 10px;
+
+		    span {
+		    	display: none;
+		    }
+		}
+
+		.password span {
+			background-position: 10px -150px;
+		}
+
+		.Rotate {
+			font-size: 14px;
+		    margin-bottom: 10px;
+		    overflow: hidden;
+		    padding: 0;
+		    width: 312px;
+
+		    .Rotate-operate {
+			    color: #555;
+			    height: 16px;
+			    line-height: 16px;
+			    margin: 0 1px 8px;
+			    position: relative;
+			}
+
+			.Rotate-prompt {
+			    font-size: 14px;
+			    opacity: 1;
+			    position: absolute;
+			    transform: translate(0px, 0px);
+			    transition: all 0.25s ease-out 0s;
+			    vertical-align: baseline;
+			    visibility: visible;
+			}
+
+			label.error.is-visible {
+			    opacity: 1;
+			    transform: translate(0px, 0px);
+			    visibility: visible;
+			}
+
+			.Rotate-refresh {
+			    cursor: pointer;
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			}
+
+			label.error {
+			    display: none;
+			    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+			    color: #f42e00;
+			    left: 0;
+			    line-height: inherit;
+			    opacity: 0;
+			    padding: 0;
+			    border: none;
+			    position: absolute;
+			    top: 0;
+			    transform: translate(-20px, 0px);
+			    transition: all 0.25s ease-out 0s;
+			    visibility: hidden;
+			}
+
+			a {
+			    color: #1a66b3;
+			    text-decoration: none;
+			}
+			
+
+			.Rotate-background {
+			    background-repeat: no-repeat;
+			    background-position: 0 0;
+			    float: left;
+			    margin: 0 1px 0;
+			    height: 76px;
+			    width: 76px;
+			}
+
+			
+		}
+
+		.auto_login {
+			    width: 310px;
+			    height: 27px;
+			    line-height: 22px;
+			    padding-top: 7px;
+			    overflow: hidden;
+
+			    a {
+				    float: right;
+				}
+
+				input {
+				    vertical-align: middle;
+				    margin-top: -1px;
+				}
+			}
+
+			.btn a {
+			    width: 100%;
+			    border-radius: 5px;
+			    color: #fff;
+			    display: inline-block;
+			    height: 44px;
+			    text-align: center;
+			    font: normal 20px/44px "Microsoft Yahei";
+			    background: #ff2832;
+			}
+
+			.register {
+			    height: 24px;
+			    line-height: 24px;
+			    padding-top: 6px;
+
+			    .register_btn {
+				    float: right;
+				    color: #6e6e6e;
+				}
+				
+				
+
+				span {
+			    	line-height: 24px;
+				}
+			}
+
+			.partner dt {
+			    float: left;
+			    margin-right: 5px;
+
+			    a {
+				    width: 20px;
+				    height: 20px;
+				    display: block;
+				    background: url(https://login.dangdang.com/images/icon_20150706.png) 0 -260px no-repeat;
+				    text-indent: 99em;
+				    overflow: hidden;
+				}
+			}
+
+			.partner dd {
+			    padding-left: 10px;
+			    position: relative;
+			    float: left;
+			    line-height: 20px;
+
+			    a{
+			    	color: #969696;
+			    }
+			}
 	}
 }
 
+.pop_up_frame {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	
+	.shade {
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.4);
+	}
+
+	.oBox {
+		position: fixed;
+		width: 494px;
+		height: 184px;
+		margin: 0 auto;
+		left: 50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+		background: #fff;
+
+		.head h3{
+			background: #F5F5F5;
+			text-align: center;
+			font-size: 14px;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		.content {
+			height: 124px;
+			padding: 15px  25px;
+			line-height: 15px;
+
+			p span {
+				color: red;
+			}
+
+			&>span {
+				position: relative;
+				display: block;
+				top: 30px;
+				width: 56px;
+				height: 24px;
+				color: #fff;
+				text-align: center;
+				line-height: 24px;
+				margin-top: 30px;
+				background: #FF2832;
+				margin: 0 auto;
+			}
+		}
+	}
+}

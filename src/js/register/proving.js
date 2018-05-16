@@ -1,29 +1,33 @@
 /*
 * @Author: ljgoh
 * @Date:   2018-05-11 09:47:15
-* @Last Modified by:   ljgoh
-* @Last Modified time: 2018-05-11 11:31:41
+* @Last Modified by:   WoodenMan001
+* @Last Modified time: 2018-05-16 10:31:52
 */
-define(["../common/random-min","../common/cookieJar-min"],function(rd,ck){
+
+define(["../common/random","../common/cookieJar"],function(rd,ck){
 	return {
 		//设置验证码，验证码存入cookie
-		setCode: function() {
-			let code = document.getElementById('code');
+		setCode: function($) {
+			let code = $('#code');
 			let codeStr = '';
 			for (var i = 0; i < 4; i++) {
 				codeStr += rd.getCode();
 			}
 
-			code.innerHTML = codeStr;
-			code.style.background = rd.getColor();
-			ck.setCookie('codeStr',codeStr,1);
+			code.text(codeStr);
+			code.css('background',rd.getColor());
+			$.cookie('codeStr',codeStr,1);
 		},
-		codeBtn: function() {
+		//点击更换按钮
+		codeBtn: function($) {
 			let me = this;
-			let codebtn = document.querySelector('#code +a');
-			codebtn.onclick = function() {
-				me.setCode();
-			}
+			let codebtn = $('#code +a');
+			//点击按钮触发 setCode 方法，更换code
+			codebtn.click(() => {
+				me.setCode($);
+			})
+
 			return this.codeStr;
 		}
 	}
