@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/*
+* @Author: ljgoh
+* @Date:   2018-05-10 12:22:16
+* @Last Modified by:   WoodenMan001
+* @Last Modified time: 2018-05-14 11:06:32
+*/
+/*
+* @Author: WoodenMan001
+* @Date:   2018-05-14 11:04:08
+* @Last Modified by:   WoodenMan001
+* @Last Modified time: 2018-05-14 11:09:57
+*/
+/*
+* @Author: ljgoh
+* @Date:   2018-05-10 12:22:44
+* @Last Modified by:   WoodenMan001
+* @Last Modified time: 2018-05-14 20:28:18
+*/
+* {
+  margin: 0;
+  padding: 0;
+  color: #404040;
+  font: 12px/18px "宋体", Arial, Helvetica, sans-serif; }
+
+li {
+  list-style: none; }
+  li.bulkhead {
+    padding: 0;
+    width: 1px;
+    height: 24px;
+    line-height: 24px;
+    background: url(https://login.dangdang.com/images/unite_header_bg_1101.gif) no-repeat 0 -105px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden; }
+
+.con {
+  clear: both;
+  zoom: 1; }
+
+a {
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover {
+    color: red; }
+
+.a_hover_red {
+  cursor: pointer;
+  text-decoration: none; }
+  .a_hover_red:hover {
+    color: red !important;
+    text-decoration: underline; }
+
+.a_color, .header_nav p a, header.rs .main div.header_nav p a, div.content_warn a, section.rs .main .content_form td a {
+  color: #1a66b3; }
+  .a_color:hover, .header_nav p a:hover, header.rs .main div.header_nav p a:hover, div.content_warn a:hover, section.rs .main .content_form td a:hover {
+    color: #1a66b3;
+    text-decoration: underline; }
+
+.fa {
+  color: red; }
+
+.after:after {
+  content: '.';
+  height: 0;
+  display: block;
+  clear: both;
+  overflow: hidden; }
+
+.blockCenter, .content_wrap .main, div.content_warn {
+  margin: 0 auto; }
+
+.textCenter, section.rs .main .content_form td a.btn {
+  text-align: center; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.content_wrap {
+  width: 100%; }
+  .content_wrap .main {
+    width: 960px; }
+
+.header_nav, header.rs .main div.header_nav {
+  width: 788px;
+  margin-top: 5px; }
+  .header_nav, header.rs .main div.header_nav, .header_nav ul, header.rs .main div.header_nav ul, .header_nav p, header.rs .main div.header_nav p {
+    float: right; }
+  .header_nav li:hover > a, header.rs .main div.header_nav li:hover > a {
+    text-decoration: underline; }
+  .header_nav ul.nav > li, header.rs .main div.header_nav ul.nav > li {
+    border: 1px solid #fff;
+    position: relative; }
+    .header_nav ul.nav > li a, header.rs .main div.header_nav ul.nav > li a {
+      padding: 0 10px;
+      border: 1px solid #fff; }
+    .header_nav ul.nav > li.icon:hover {
+      border: 1px solid red !important; }
+      .header_nav ul.nav > li.icon:hover > a,
+      .header_nav ul.nav > li.icon:hover .fa {
+        color: red;
+        text-decoration: none; }
+    .header_nav ul.nav > li.icon .fa {
+      position: relative;
+      top: -3px;
+      color: #949493; }
+  .header_nav p, header.rs .main div.header_nav p {
+    display: inline;
+    padding: 2px 10px 0 0;
+    width: 450px;
+    height: 19px;
+    text-align: right; }
+
+body {
+  background: #f6f9fb; }
+
+div.content_warn {
+  width: 670px;
+  padding: 5px 0;
+  margin-bottom: 8px;
+  line-height: 24px;
+  background: #fef7f5; }
+  div.content_warn .fa {
+    font-size: 15px; }
+
+/*register*/
+header.rs .main {
+  background: #fff url(https://login.dangdang.com/images/unite_header_bg_1101.gif) repeat-x 0 -148px;
+  border-bottom: 3px solid #f07700;
+  padding-top: 2px;
+  height: 71px;
+  color: #404040; }
+  header.rs .main .header_nav > ul > li, header.rs .main div.logo {
+    float: left; }
+  header.rs .main div.drop-down {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid red;
+    border-top: none;
+    z-index: 9;
+    top: 18px;
+    left: -1px; }
+    header.rs .main div.drop-down ul, header.rs .main div.drop-down li {
+      width: 100%; }
+    header.rs .main div.drop-down li {
+      border: none;
+      padding: 3px 0; }
+  header.rs .main .logo {
+    display: block; }
+    header.rs .main .logo img {
+      display: block; }
+
+section.rs .main {
+  position: relative;
+  left: -5px;
+  margin: 40px auto;
+  width: 950px;
+  background-color: #ebeeef; }
+  section.rs .main .container {
+    position: relative;
+    box-shadow: -1px 1px 1px #e8ebec;
+    top: -10px;
+    left: 10px;
+    background: #fff; }
+  section.rs .main .header {
+    position: relative;
+    height: 74px;
+    margin: 0 15px;
+    border-bottom: 1px solid #eceef2; }
+    section.rs .main .header span {
+      float: right;
+      padding-top: 40px;
+      padding-right: 10px;
+      font-size: 22px; }
+      section.rs .main .header span a {
+        margin-right: 5px; }
+      section.rs .main .header span .fa {
+        position: relative;
+        top: 1px;
+        left: 6px;
+        font-size: 16px; }
+    section.rs .main .header > a {
+      position: relative;
+      display: inline-block;
+      width: 135px;
+      height: 46px;
+      top: 27px;
+      left: 20px;
+      margin-left: 6px;
+      border: 1px solid #eceef2;
+      font-size: 16px;
+      line-height: 42px;
+      text-align: center;
+      color: #464646;
+      background-color: #f5f5f5; }
+      section.rs .main .header > a.active {
+        background: #fff;
+        top: 28px;
+        border-bottom: none; }
+  section.rs .main .aside {
+    position: fixed;
+    left: 1433.5px;
+    top: 106px; }
+    section.rs .main .aside a {
+      background: url(https://login.dangdang.com/images/xiaodangdang.png) no-repeat scroll 0 0 transparent;
+      display: block;
+      height: 120px;
+      width: 34px; }
+  section.rs .main .content {
+    padding: 45px 0 25px; }
+  section.rs .main .content_form tr {
+    display: block;
+    width: 100%; }
+    section.rs .main .content_form tr i[name="yz"] {
+      position: absolute;
+      display: none;
+      right: -15px;
+      top: 13px; }
+    section.rs .main .content_form tr .code i[name="yz"] {
+      right: 150px; }
+  section.rs .main .content_form td {
+    display: inline-block;
+    font-size: 14px; }
+    section.rs .main .content_form td:first-child, section.rs .main .content_form td:last-child {
+      padding-bottom: 30px; }
+    section.rs .main .content_form td:first-child {
+      width: 340px;
+      text-align: right;
+      padding-right: 10px; }
+    section.rs .main .content_form td:last-child {
+      position: relative;
+      text-align: left;
+      width: 400px; }
+      section.rs .main .content_form td:last-child input {
+        float: left;
+        margin-right: 5px; }
+    section.rs .main .content_form td:not(.clause) input {
+      float: left;
+      height: 18px;
+      width: 290px;
+      border: 1px solid #e6e6e6;
+      border-radius: 2px;
+      font-family: 'Microsoft YaHei';
+      line-height: 18px;
+      color: #333;
+      letter-spacing: 1px;
+      margin-right: 10px;
+      padding: 9px 10px;
+      outline: 0 none; }
+    section.rs .main .content_form td:not(.clause) input:focus {
+      color: #505050;
+      border-color: #969696; }
+    section.rs .main .content_form td span[name='warn'],
+    section.rs .main .content_form td:not(.clause) span {
+      position: absolute;
+      display: none;
+      color: #787878;
+      line-height: 14px;
+      padding: 0 4px;
+      margin-right: 5px;
+      left: 8px;
+      bottom: 8px; }
+    section.rs .main .content_form td span[name='warn'] {
+      color: red; }
+    section.rs .main .content_form td .intensity span {
+      float: left;
+      position: relative;
+      display: inline-block;
+      width: 22px;
+      height: 10px;
+      top: 0;
+      margin: 0;
+      margin-left: 3px;
+      padding: 2px 0; }
+    section.rs .main .content_form td span.upperCase {
+      display: none;
+      border: 1px solid #fcd9b0;
+      line-height: 18px;
+      background-color: #fff0cf;
+      color: #ff8400;
+      left: 0;
+      width: 302px; }
+    section.rs .main .content_form td.code input {
+      width: 160px; }
+    section.rs .main .content_form td.code a:nth-child(2) {
+      display: inline-block;
+      width: 84px;
+      height: 37px;
+      margin-right: 5px;
+      background: yellow; }
+    section.rs .main .content_form td.code a:nth-child(3) {
+      position: relative;
+      display: inline-block;
+      top: -3px; }
+    section.rs .main .content_form td.clause input {
+      position: relative;
+      top: 3px; }
+    section.rs .main .content_form td a.btn {
+      display: block;
+      width: 178px;
+      height: 44px;
+      font-size: 20px;
+      line-height: 44px;
+      background: red;
+      color: #fff;
+      border-radius: 22px;
+      margin-left: 50px;
+      text-decoration: none; }
+  section.rs .main #code {
+    text-align: center;
+    text-decoration: none;
+    line-height: 37px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff; }
+
+/* login */
+.lg {
+  background: #fff; }
+
+.lg > header .main {
+  padding-top: 10px;
+  height: 71px;
+  color: #404040; }
+  .lg > header .main .suggest {
+    height: 16px;
+    float: right;
+    margin-top: 40px; }
+    .lg > header .main .suggest > * {
+      color: #787878;
+      line-height: 16px; }
+    .lg > header .main .suggest:hover a {
+      text-decoration: underline; }
+    .lg > header .main .suggest i {
+      font-size: 16px; }
+
+.lg > section {
+  background: url(https://login.dangdang.com/p/get_login_ad.php) no-repeat center center;
+  height: 590px; }
+  .lg > section .toLogin {
+    background: #fff;
+    padding: 15px 25px 15px 15px;
+    float: right;
+    width: 320px;
+    color: #6e6e6e;
+    margin: 90px auto 0;
+    position: relative;
+    border: 1px solid #eef2f4;
+    box-shadow: 0px 1px 2px #eee; }
+    .lg > section .toLogin .form {
+      position: relative;
+      padding: 15px; }
+    .lg > section .toLogin .content_warn {
+      display: block;
+      width: 355px;
+      height: 24px;
+      right: -1px;
+      top: -27px;
+      line-height: 24px;
+      color: #828282;
+      padding-left: 5px;
+      background: url(https://login.dangdang.com/images/new_tip.png) 3px 5px no-repeat #fef7f5;
+      border: 1px solid #fedbd1;
+      position: absolute; }
+    .lg > section .toLogin .swith_codeImg {
+      background: url(https://login.dangdang.com/images/scan_icon.png);
+      display: block;
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      right: -15px;
+      top: 7px;
+      z-index: 10; }
+    .lg > section .toLogin .hint {
+      position: absolute;
+      top: 7px;
+      right: 48px;
+      border: 1px solid #fedbd1;
+      background-color: #fef7f5;
+      color: #ff572a;
+      padding: 4px 6px; }
+      .lg > section .toLogin .hint span.icon {
+        background: url(https://login.dangdang.com/images/arrow_right_icon.png) no-repeat;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        right: -12px;
+        top: 6px; }

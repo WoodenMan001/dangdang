@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-14 10:43:20
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-15 11:44:22
+* @Last Modified time: 2018-05-16 00:59:16
 */
 @import '../common/head';
 .content_wrap .main {
@@ -13,6 +13,15 @@
 a {
 	color: #6666;
 }
+
+ul.lunbo_tab {
+	transform: translateX(-50%);
+	li.on {
+		background: red;
+		color: #fff;
+	}	
+}
+
 
 header {
 	.head_nav {
@@ -426,6 +435,7 @@ header {
 
 		    a {
 		    	color: #323232;
+		    	font:16px/32px "Microsoft Yahei";
 		    }
 		}
 
@@ -553,6 +563,7 @@ header {
 			.tab {
 			    position: absolute;
 			    left: 50%;
+			    transform:translateX(-50%);
 			    bottom: 7px;
 
 			    li {
@@ -567,6 +578,11 @@ header {
 				    background-color: #646464;
 				    margin-right: 6px;
 				    border-radius: 10px;
+			    }
+
+			    li.on {
+			    	background: red;
+
 			    }
 			}
 
@@ -670,7 +686,7 @@ header {
 				    margin: 0 6px 0 0;
 			    }
 
-			    li.current {
+			    li.on {
 			    	background:#ff2832
 			    }
 
@@ -970,6 +986,8 @@ header {
 		    }
 
 		    img {
+		    	position: relative;
+		    	left: -10px;
 		    	display: block;
 			    border: none;
 			    height: 113px;
@@ -979,6 +997,10 @@ header {
 			    -o-transition: all .3s ease;
 			    -ms-transition: all .3s ease;
 			    transition: all .3s ease;
+		    }
+
+		    &:hover img {
+		    	left:0px;
 		    }
 	    }
 	}
@@ -1070,6 +1092,7 @@ header {
 			}
 
 			.v_brand_logo a {
+				line-height: 160px;
 				float: left;
 			    width: 99px;
 			    height: 119px;
@@ -1089,7 +1112,7 @@ header {
 			position: absolute;
 		    top: 0;
 		    left: 199px;
-
+		
 		    a {
 		    	height: 280px;
 		    	float: left;
@@ -1105,6 +1128,8 @@ header {
     			height: 275px;
 		    }
 			
+
+
 			a:hover img {
 				margin:-3px -2px -2px -3px;
 			}
@@ -1112,6 +1137,12 @@ header {
 		    img {
 		    	width: 199px;
     			height: 280px;
+		    }
+
+		    &>.v_special_upper:nth-child(2) {
+				a,img {
+					height: 238px;	
+				}
 		    }
 		}
 
@@ -1538,7 +1569,7 @@ header {
 					overflow: hidden;
 
 					a {
-						line-height: 20px;
+						line-height: 32px;
 					}
 				}
 
@@ -1698,6 +1729,12 @@ header {
 			    padding: 4px 3px 7px;
 			    border: 1px solid #fff;
 			}
+
+			li:hover {
+				border: 1px solid #efefef;
+				box-shadow: 0 0 4px #ddd;
+				position: relative;
+			}
 		}
 
 		.pic {
@@ -1729,6 +1766,7 @@ header {
 
 			span {
 				color:#ff2832;
+				font:18px Arial;
 			}
 		}
 	}

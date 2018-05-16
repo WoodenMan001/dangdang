@@ -1,9 +1,4 @@
-<!-- /**
- * @Author: ljgoh
- * @Date:   2018-05-10 09:26:03
- * @Last Modified by:   ljgoh
- * @Last Modified time: 2018-05-10 10:12:51
- */ -->
+
 <?php
 	require "mysql.php";
 	//连接主机
