@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-14 15:05:04
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 14:54:37
+* @Last Modified time: 2018-05-17 21:03:57
 */
 ;(function() {
 	let $addArr = $(".head_nav_address >.drop-down")[0];
@@ -71,7 +71,6 @@
 		let box = $('#indexreco');
 		$(box).on('click','li',function(){
 			let index = $(this).index();
-			console.log($(this))
 			let sid = $(this).attr('sid');//获取商品sid
 			$(window).attr('location','http://localhost/project/dangdang/src/details?sid='+sid);
 		});

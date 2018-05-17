@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-17 09:58:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 15:26:17
+* @Last Modified time: 2018-05-17 20:53:20
 */
 define([], function (){
 	return {
@@ -28,6 +28,7 @@ define([], function (){
 						}
 					});
 		},
+		//加载数据
 		loadingData:function($,data) {
 			let goods = data.goods[0];
 			
@@ -45,9 +46,10 @@ define([], function (){
 			$(priceObj).text(goods.price)
 			this.lunbofn($,goods);
 		},
+		//加载轮播图图片
 		lunbofn:function($,goods) {
 			let largePic = $('#largePic');
-			let detailPicDiv = $('#detailPicDiv');
+			let detailPicDiv = $('#detailPic');
 			let mainImgSlider = $('#main-img-slider');
 			let imgArr = goods.url.split(';');
 			let str = '';
