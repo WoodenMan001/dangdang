@@ -3,7 +3,7 @@
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-16 21:15:04
+* @Last Modified time: 2018-05-17 00:16:00
 */
 /*
 * @Author: WoodenMan001
@@ -1033,10 +1033,183 @@ section.rs .main {
   .details .pic_info .dp_slide .next:hover {
     right: 0;
     background-position: -15px 0; }
-  .details .pic_info .share_div {
-    padding-top: 5px;
-    position: relative; }
-    .details .pic_info .share_div .share_icon {
+
+.details .show_info {
+  float: left;
+  width: 860px;
+  font: 12px "Verdana","Simsun";
+  color: #646464; }
+
+.details .sale_box {
+  line-height: 24px;
+  padding: 0 0 0 10px;
+  background: url(https://login.dangdang.com/images/sale_box_bg.png) repeat-y 670px 0;
+  margin-top: 5px; }
+
+.details .show_info a,
+.details .show_info a:hover {
+  color: #1a66b3; }
+
+.details .sale_box_left {
+  width: 630px;
+  float: left; }
+  .details .sale_box_left .name_info {
+    font-family: "Verdana","Microsoft Yahei";
+    font-weight: normal;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 0 6px 12px 0; }
+  .details .sale_box_left h1 {
+    line-height: 24px;
+    max-height: 48px;
+    _height: expression(this.scrollHeight>48 ? "48px":"auto");
+    overflow: hidden;
+    color: #323232;
+    font-size: 18px;
+    margin: 0 auto; }
+    .details .sale_box_left h1 .icon_name {
+      position: relative;
+      top: 2px; }
+  .details .sale_box_left .name_info h2 {
+    padding-top: 6px;
+    max-height: 96px;
+    _height: expression(this.scrollHeight>96 ? "96px":"auto");
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 24px; }
+    .details .sale_box_left .name_info h2 .head_title_name {
+      color: #323232; }
+  .details .sale_box_left .name_info .hot {
+    color: #ff2832; }
+  .details .sale_box_left .product_main .name_info .yushou {
+    color: #00b68a; }
+  .details .sale_box_left .sale_box .messbox_info .t1 {
+    display: inline-block;
+    padding-right: 25px; }
+  .details .sale_box_left .sale_box .messbox_info .t1 {
+    display: inline-block;
+    padding-right: 25px; }
+  .details .sale_box_left .sale_box .messbox_info .pinglun {
+    clear: both; }
+
+.details .sale_box .price_info {
+  background-color: #ebebeb;
+  padding: 0 0 0 10px;
+  margin: 6px 0 0 -10px;
+  line-height: 28px;
+  position: relative;
+  width: 630px;
+  z-index: 6666; }
+  .details .sale_box .price_info .price_pc {
+    float: left;
+    padding-bottom: 7px; }
+    .details .sale_box .price_info .price_pc > div {
       float: left; }
-    .details .pic_info .share_div a.btn_fxd {
-      height: 26px; }
+  .details .sale_box .price_info .price_pc .price_d {
+    font-size: 26px;
+    color: #e52222; }
+  .details .sale_box .price_info .t {
+    color: #8f8f8f;
+    font-weight: normal !important;
+    font-size: 12px !important; }
+  .details .sale_box .price_info .price_pc .price_d .yen {
+    font-size: 14px; }
+  .details .sale_box .price_info .yen {
+    font: 12px verdana; }
+  .details .sale_box .price_info .price_pc .price_zhe {
+    line-height: 93px;
+    color: #e52222; }
+  .details .sale_box .price_info .price_pc .price_m {
+    line-height: 93px;
+    text-decoration: line-through;
+    color: #969696; }
+
+.product_main .sale_box .price_info {
+  background-color: #ebebeb;
+  padding: 0 0 0 10px;
+  margin: 6px 0 0 -10px;
+  line-height: 28px;
+  position: relative;
+  width: 630px;
+  z-index: 6666; }
+
+.product_main .sale_box .buy_box {
+  padding: 30px 0 35px; }
+  .product_main .sale_box .buy_box .text {
+    color: #969696;
+    clear: both;
+    line-height: 20px;
+    width: 630px;
+    overflow: hidden; }
+
+.product_main .sale_box .buy_box .num {
+  float: left;
+  height: 34px;
+  margin-top: 3px;
+  border: 1px solid #e9e9e9;
+  width: 38px;
+  padding-right: 23px;
+  overflow: hidden;
+  text-align: center;
+  position: absolute; }
+  .product_main .sale_box .buy_box .num input {
+    width: 38px !important;
+    height: 32px;
+    line-height: 32px;
+    border: 0;
+    background: #fff;
+    text-align: center; }
+  .product_main .sale_box .buy_box .num .num_add {
+    background-position: -37px 0;
+    top: 0; }
+  .product_main .sale_box .buy_box .num .num_disabled,
+  .product_main .sale_box .buy_box .num .num_disabled:hover {
+    background-color: #ccc;
+    cursor: default; }
+  .product_main .sale_box .buy_box .num .num_del {
+    background-position: -37px -17px;
+    top: 17px; }
+  .product_main .sale_box .buy_box .num a,
+  .product_main .sale_box .buy_box .num a:hover {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 23px;
+    height: 17px;
+    background-image: url(https://login.dangdang.com/images/product_sprites.png);
+    background-repeat: no-repeat;
+    background-color: #646464;
+    margin-left: 6px;
+    _display: inline; }
+
+#dd-price {
+  margin-top: 15px;
+  font-size: 26px;
+  color: red; }
+
+.details html body product_wrapper {
+  background: #fff !important; }
+
+.price_info {
+  height: 66px; }
+
+.product_main .sale_box .buy_box .buy_box_btn {
+  float: left;
+  margin-left: 80px;
+  width: 500px; }
+
+.num {
+  float: left; }
+
+#buy_now_button,
+#part_buy_button {
+  float: left;
+  width: 134px;
+  height: 36px;
+  color: #fff;
+  background: red;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 5%; }
+
+#buy_now_button {
+  margin-left: 15px; }

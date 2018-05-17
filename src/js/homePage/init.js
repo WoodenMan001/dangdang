@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-14 15:05:04
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-15 20:59:14
+* @Last Modified time: 2018-05-17 09:50:18
 */
 ;(function() {
 	let $addArr = $(".head_nav_address >.drop-down")[0];
@@ -19,6 +19,57 @@
 	dropDown($dropdownLis,["fa fa-angle-up","fa fa-angle-down"]);
 	setNav($nav_2_ul);
 	tab($('.tab_qh'));
+	stairsFn();
+
+	//楼梯
+	function stairsFn(){
+		let objHeiArr = ['647','1190','1770','2290', '2602',];
+		let oBox = $('.box .con')[0];
+		let screenList = $('.box .fix_screen_list li ');
+		let isfinish = true;
+
+		$(screenList).each(function(i,item) {
+			console.log(0)
+			$(item).mouseover(function() {
+				$(item).addClass('on');
+			});
+			$(item).mouseout(function() {
+				$(item).removeClass('on');
+			});
+			$(item).click(function() {
+				// if(isfinish){
+				// 	isfinish = false;
+				// 	let num = ($(document).scrollTop()-objHeiArr[i])/10*.8;
+				// 	$(document)[0].everyTime('1s',function(){
+				// 		let topnum = $(document).scrollTop()+num;
+				// 		if(topnum >= objHeiArr[i]-20 || topnum <= objHeiArr[i]+20 ){
+				// 			topnum = objHeiArr[i];
+				// 		}
+				// 		$(document).scrollTop(topnum)
+				// 	});
+				// }
+				$(document).scrollTop(objHeiArr[i])
+			});
+		});
+
+
+
+		$(document).scroll(function(){
+			let screenList = $('.box .fix_screen_list li ');
+			$(objHeiArr).each(function(i,item) {
+				console.log(i,$(document).scrollTop(),item)
+
+				console.log($(document).scrollTop() >= item 
+					&& (i+1 ==objHeiArr.length || $(document).scrollTop() < objHeiArr[i+1]))
+				if($(document).scrollTop() >= item 
+					&& (i+1 ==objHeiArr.length || $(document).scrollTop() < objHeiArr[i+1])) {
+					console.log(113423,$(screenList).eq(i))
+					$(screenList).eq(i).addClass('current');
+					$(screenList).eq(i).siblings('li').removeClass('current');
+				}
+			})
+		});
+	}
 
 
 	//tab切换
