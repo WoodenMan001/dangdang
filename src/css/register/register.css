@@ -3,7 +3,7 @@
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 00:16:00
+* @Last Modified time: 2018-05-17 16:29:56
 */
 /*
 * @Author: WoodenMan001
@@ -1019,13 +1019,16 @@ section.rs .main {
       overflow: hidden;
       overflow: hidden;
       text-decoration: none; }
+    .details .pic_info .dp_slide img {
+      width: 54px;
+      height: 54px; }
   .details .pic_info .dp_slide .mainimg_fy,
   .details .pic_info .dp_slide .mainimg_fy:hover {
     position: absolute;
     height: 56px;
     width: 14px;
     top: 0;
-    background: #969696 url(https://login.dangdang.com/images/product_sprites.png) no-repeat 0 0; }
+    background: #969696 url(http://product.dangdang.com/images/product_sprites.png) no-repeat 0 0; }
   .details .pic_info .dp_slide .prev,
   .details .pic_info .dp_slide .prev:hover {
     left: 0; }
@@ -1058,14 +1061,15 @@ section.rs .main {
     font-weight: normal;
     border-bottom: 1px solid #f5f5f5;
     padding: 0 6px 12px 0; }
+  .details .sale_box_left h1 span,
   .details .sale_box_left h1 {
     line-height: 24px;
     max-height: 48px;
-    _height: expression(this.scrollHeight>48 ? "48px":"auto");
     overflow: hidden;
     color: #323232;
     font-size: 18px;
     margin: 0 auto; }
+    .details .sale_box_left h1 span .icon_name,
     .details .sale_box_left h1 .icon_name {
       position: relative;
       top: 2px; }

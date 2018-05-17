@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-15 14:53:59
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-16 00:44:44
+* @Last Modified time: 2018-05-17 10:18:33
 */
 
 ;(function() {
@@ -29,7 +29,6 @@
 				return a.sid-b.sid;
 			});
 
-			console.log(list)
 	  		let list_lunbo = list.lunbo.sort((a,b) => {
 				return a.sid-b.sid;
 			});
@@ -48,7 +47,6 @@
 
 	//商品列表
 	function loading_goods(list) {
-			console.log(list)
 		$(list).each(function(){
 			let oBox = $('#indexreco');
 			let str = `<li sid = ${this.sid}>

@@ -2,7 +2,7 @@
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 00:16:00
+* @Last Modified time: 2018-05-17 16:29:56
 */
 
 @import '../common/head';
@@ -1263,6 +1263,11 @@ section.rs .main {
 		    overflow: hidden;
 		    text-decoration: none;
 		}
+
+		img {
+			width: 54px;
+		    height: 54px;
+		}
 	}
 
 	.dp_slide .mainimg_fy,
@@ -1271,7 +1276,7 @@ section.rs .main {
 	    height: 56px;
 	    width: 14px;
 	    top: 0;
-	    background: #969696 url(https://login.dangdang.com/images/product_sprites.png) no-repeat 0 0;
+	    background: #969696 url(http://product.dangdang.com/images/product_sprites.png) no-repeat 0 0;
 	}
 
 	.dp_slide .prev, 
@@ -1315,11 +1320,11 @@ section.rs .main {
 	    border-bottom: 1px solid #f5f5f5;
 	    padding: 0 6px 12px 0;
 	}
-
+	
+	h1 span,
 	h1 {
 	    line-height: 24px;
 	    max-height: 48px;
-	    _height: expression(this.scrollHeight>48 ? "48px":"auto");
 	    overflow: hidden;
 	    color: #323232;
 	    font-size: 18px;

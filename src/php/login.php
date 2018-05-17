@@ -2,8 +2,8 @@
 	require "connectSql.php"; 
 
 	if(isset($_POST['username']) && isset($_POST['password'])){//
-	    $username=$_POST['username'];//获取用户名
-	    $password=$_POST['password'];//获取密码
+	    $username=@$_POST['username'];//获取用户名
+	    $password=@$_POST['password'];//获取密码
 	}else{
 		exit('非法操作');
 	}

@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-14 15:05:04
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 09:50:18
+* @Last Modified time: 2018-05-17 14:54:37
 */
 ;(function() {
 	let $addArr = $(".head_nav_address >.drop-down")[0];
@@ -20,7 +20,7 @@
 	setNav($nav_2_ul);
 	tab($('.tab_qh'));
 	stairsFn();
-
+	goodsClick();
 	//楼梯
 	function stairsFn(){
 		let objHeiArr = ['647','1190','1770','2290', '2602',];
@@ -29,7 +29,7 @@
 		let isfinish = true;
 
 		$(screenList).each(function(i,item) {
-			console.log(0)
+			//li标签 鼠标移入 移出  点击事件
 			$(item).mouseover(function() {
 				$(item).addClass('on');
 			});
@@ -53,28 +53,32 @@
 		});
 
 
-
+		//滚动条拉动事件
 		$(document).scroll(function(){
 			let screenList = $('.box .fix_screen_list li ');
 			$(objHeiArr).each(function(i,item) {
-				console.log(i,$(document).scrollTop(),item)
 
-				console.log($(document).scrollTop() >= item 
-					&& (i+1 ==objHeiArr.length || $(document).scrollTop() < objHeiArr[i+1]))
 				if($(document).scrollTop() >= item 
 					&& (i+1 ==objHeiArr.length || $(document).scrollTop() < objHeiArr[i+1])) {
-					console.log(113423,$(screenList).eq(i))
 					$(screenList).eq(i).addClass('current');
 					$(screenList).eq(i).siblings('li').removeClass('current');
 				}
 			})
 		});
 	}
-
+	//点击商品，跳转详情页
+	function goodsClick() {
+		let box = $('#indexreco');
+		$(box).on('click','li',function(){
+			let index = $(this).index();
+			console.log($(this))
+			let sid = $(this).attr('sid');//获取商品sid
+			$(window).attr('location','http://localhost/project/dangdang/src/details?sid='+sid);
+		});
+	}
 
 	//tab切换
 	function tab(tabBox) {
-		console.log(111,tabBox,tabBox.find('.tab_qh_t'))
 		let tabLi  = tabBox.find('.tab_qh_t >li');
 		let tabCont = tabBox.find('.tab_qh_c >div');
 

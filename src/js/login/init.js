@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-16 16:22:39
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-16 18:22:37
+* @Last Modified time: 2018-05-17 10:40:54
 */
 
 define([], function (){
@@ -12,8 +12,6 @@ define([], function (){
 			this.setFrame($);
 			//查询账号秘密,并设置input
 			this.setInput($);
-
-
 		},
 		setInput: function($) {
 			//获取cookie中的账号密码

@@ -2,10 +2,10 @@
 * @Author: ljgoh
 * @Date:   2018-05-11 09:47:15
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-16 10:31:52
+* @Last Modified time: 2018-05-17 15:22:26
 */
 
-define(["../common/random","../common/cookieJar"],function(rd,ck){
+define(["../common/random"],function(rd){
 	return {
 		//设置验证码，验证码存入cookie
 		setCode: function($) {

@@ -2,7 +2,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-16 16:53:53
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-16 18:22:28
+* @Last Modified time: 2018-05-17 16:37:50
 */
 define([], function (){
 	return {
@@ -96,6 +96,7 @@ define([], function (){
 				              },1000)
 
 						} else {
+							$(window).attr('location','http://localhost/project/dangdang/src/login.html');
 							alert('账号密码错误，请重试')
 						}
 					});
