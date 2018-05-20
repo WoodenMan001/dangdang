@@ -2,9 +2,9 @@
  * @Author: ljgoh
  * @Date:   2018-05-11 15:01:29
  * @Last Modified by:   WoodenMan001
- * @Last Modified time: 2018-05-16 15:52:58
+ * @Last Modified time: 2018-05-20 23:04:09
  */
-define([], function() {
+define(['../common/address'], function(ad) {
 	return {
 		judgeArr: {},
 		isClick: false,
@@ -83,7 +83,8 @@ define([], function() {
 			let $password = $('#password').val();
 			let $username = $('#tel').val();
 
-			$.post('http://localhost/project/dangdang/src/php/register.php'
+			let address = ad.addres;
+			$.post(address+'php/register.php'
 					,{'username':$username,'password':$password}
 					,function(data){
 						if(data==1){
@@ -96,7 +97,7 @@ define([], function() {
 				                $t--;
 				                if($t<0){
 				                  clearInterval(timer);
-				                  $(window).attr('location','http://localhost/project/dangdang/src/index.html');
+				                  $(window).attr('location',address+'index.html');
 				                }else{
 				                  $('#win strong').text($t);
 				                }     

@@ -2,9 +2,11 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-14 15:05:04
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 21:03:57
+* @Last Modified time: 2018-05-20 23:00:45
 */
-;(function() {
+define(['../common/address'], function (ad){
+	return {
+		init: function($) {
 	let $addArr = $(".head_nav_address >.drop-down")[0];
 			//收缩按钮
 	let $oSelect = $('.select');
@@ -21,6 +23,7 @@
 	tab($('.tab_qh'));
 	stairsFn();
 	goodsClick();
+	lunbo();
 	//楼梯
 	function stairsFn(){
 		let objHeiArr = ['647','1190','1770','2290', '2602',];
@@ -72,7 +75,8 @@
 		$(box).on('click','li',function(){
 			let index = $(this).index();
 			let sid = $(this).attr('sid');//获取商品sid
-			$(window).attr('location','http://localhost/project/dangdang/src/details?sid='+sid);
+			let address = ad.addres;
+			$(window).attr('location',address+'details?sid='+sid);
 		});
 	}
 
@@ -139,4 +143,91 @@
 		});
 	}
 
-})();
+
+	//轮播图
+	function lunbo() {
+		let i = 0;
+		let lunboBox = $('#lunboBox');
+		let leftBtn = $('#lunboBox #btn_l');
+		let rightBtn = $('#lunboBox #btn_r'); 
+		let imgs = $('#lunboBox ul li a img');
+		let tabs = $('#lunboBox ul.tab li');
+		let timer = null;
+		$('#btn_l').on('click',function() {
+			let imgs = $('#lunboBox ul.pic li');
+			let tabs = $('#lunboBox ul.tab li');
+			i = i-1;
+			let img = $(imgs).eq(i);
+			if(i == -1) {
+				i = imgs.length-1;
+			}
+			$(imgs).eq(i).animate({
+				'opacity': 1,
+				'z-index': 3
+			}).siblings().animate({
+				'opacity': 0,
+				'z-index': 1
+			});
+			$(tabs).eq(i).addClass('on').siblings().removeClass('on');
+		})
+
+		$('#btn_r').on('click',function() {
+			let imgs = $('#lunboBox ul.pic li');
+			let tabs = $('#lunboBox ul.tab li');
+			i = i+1;
+			let img = $(imgs).eq(i);
+			if(i == imgs.length-1) {
+				i =0;
+			}
+			$(imgs).eq(i).animate({
+				'opacity': 1,
+				'z-index': 3
+			}).siblings().animate({
+				'opacity': 0,
+				'z-index': 1
+			});
+			$(tabs).eq(i).addClass('on').siblings().removeClass('on');
+		})
+		$(lunboBox).on('mouseover','ul,.btn',function() {
+			clearInterval(timer);
+			$(leftBtn).css('left',0);
+			$(rightBtn).css('right',0);
+		});
+		$(lunboBox).mouseout(function() {
+			timer = setInterval(function(){
+		    	$('#btn_l').trigger('click');  
+			},2000);
+			$(leftBtn).css('left','-46px');
+			$(rightBtn).css('right','-46px');
+		});
+
+		$(lunboBox).on('mouseover','#lunbo_tab li',function() {
+			let imgs = $('#lunboBox ul.pic li');
+			let index = $(this).index();
+			i= index;
+			$(this).addClass('on').siblings().removeClass('on');
+			$(imgs).eq(i).animate({
+				'opacity': 1,
+				'z-index': 3
+			}).siblings().animate({
+				'opacity': 0,
+				'z-index': 1
+			});
+		})
+		timer=setInterval(function(){
+		    	$('#btn_l').trigger('click');  
+		},2000);
+	}
+
+	(function(){
+		let cartbtn = $('#gwc');
+		console.log($(cartbtn))
+		$(cartbtn).on('click',function() {
+
+			let address = ad.addres;
+			$(window).attr('location',address+'cart.html');
+		})
+	})()
+}
+	}
+})

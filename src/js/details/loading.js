@@ -2,20 +2,19 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-17 09:58:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 20:53:20
+* @Last Modified time: 2018-05-20 22:45:46
 */
-define([], function (){
+define(['../common/address'], function (ad){
 	return {
 		init : function($) {
 			let me = this;
 			let href = $(window).attr('location').href;
 			let sid = href.split('=')[1];
-			console.log(sid)
 			if(sid != 2 && sid != 6){
 				sid = 6;
 			}
-			
-			$.post('http://localhost/project/dangdang/src/php/details.php'
+			let address = ad.addres;
+			$.post(address+ 'php/details.php'
 					,{'goodsid':sid}
 					,function(data){
 						if(data){

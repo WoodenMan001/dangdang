@@ -1,8 +1,8 @@
 /*
 * @Author: WoodenMan001
-* @Date:   2018-05-14 11:56:24
+* @Date:   2018-05-18 17:42:17
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-20 22:48:27
+* @Last Modified time: 2018-05-20 18:05:58
 */
 requirejs.config({
     paths: {
@@ -10,8 +10,7 @@ requirejs.config({
         'cookie':"../common/jquery.cookie",
     }
 });
-require(['jquery','addData','init','cookie'], function ($,add,init,fn){
-	//页面初始化
-	init.init($)
-	add.init($);
+require(['jquery','init','cartFn','cookie'], function ($,init,ctmfn){
+	init.init($);
+	ctmfn.init($);
 });

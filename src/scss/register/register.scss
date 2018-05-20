@@ -2,7 +2,7 @@
 * @Author: ljgoh
 * @Date:   2018-05-10 12:22:16
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 16:29:56
+* @Last Modified time: 2018-05-18 17:52:47
 */
 
 @import '../common/head';
@@ -763,7 +763,7 @@ section.rs .main {
 	}	
 }
 
-
+.cart header,
 .details header {
 	.head_nav {
 		background-color: #f9f9f9;
@@ -1537,4 +1537,637 @@ section.rs .main {
 
 #buy_now_button {
 	margin-left: 15px;
+}
+
+/* cart */
+.cart header .nav{
+	width: 100%;
+}
+
+.cart {
+	background: #fff!important;
+}
+.cart .head_nav,
+.cart .content_wrap {
+	width: 100%;
+
+	.main {
+		width: 960px !important;
+	}
+}
+.cart .logo_line {
+	border-bottom: 4px solid #ff2832;
+}
+
+.cart .add_line {
+    background-color: #fafafa;
+}
+
+.cart .w960 {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.cart a.checknow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #bcbcbc;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    margin: 0 10px 0 0;
+    vertical-align: text-bottom;
+}
+
+.cart a.check_on, 
+.cart a.check_on:hover {
+    border-color: #ff2832;
+    background: #ff2832 url(../../img/icon_sprite.png) no-repeat -65px -1px;
+}
+
+.cart #cart {
+	.shopping_title {
+	    line-height: 36px;
+	    height: 36px;
+	    margin-top: 10px;
+
+	    li {
+		    float: left;
+		    text-align: center;
+
+		    &.f1 {
+			    text-align: left;
+			    width: 202px;
+			}
+
+			&.f2 {
+				text-align: left;
+			    width: 280px;
+			}
+
+			&.f3 {
+		    	width: 130px;	
+			}
+
+			&.f4 {
+				width: 130px;
+			}
+
+			&.f5 {
+			    width: 70px;
+			}
+		}
+	}
+
+	.shop_title {
+	    color: #323232;
+	    font-weight: bold;
+	    line-height: 24px;
+	    height: 24px;
+	    margin: 10px 0;
+	    padding-left: 15px;
+
+	    .shop_icon {
+		    width: 18px;
+		    height: 18px;
+		    display: inline-block;
+		    background: url(../../img/icon_sprite.png) 0 -30px no-repeat;
+		    margin: 0 6px 0 0;
+		}
+
+		.coupon_choose {
+		    position: relative;
+		    margin: 0 0 0 18px;
+		}
+		
+		a {
+		    color: #323232;
+		}
+		.coupon_choose a.coupon_choose_pointer {
+		    margin-top: 4px;
+		    cursor: pointer;
+		    width: 54px;
+		    height: 20px;
+		    display: block;
+		    background: url(../images/coupon_icon_sprite.png) 0 -116px no-repeat;
+		    color: #fff;
+		    font: normal 12px/20px "simsun";
+		    padding: 0 0 0 10px;
+		}
+	}
+
+	.shopping_list {
+	    width: 958px;
+	    border: 1px solid #ebebeb;
+	    background-color: #fafafa;
+	    margin-bottom: 40px;
+
+	    .bb_none td {
+		    border-bottom: none 0;
+		}
+
+		.row1 {
+		    padding: 0 0 0 10px;
+		    width: 42px;
+		    vertical-align: middle;
+		    border-bottom: 0;
+		}
+
+		td {
+		    vertical-align: top;
+		    padding-top: 15px;
+		    position: relative;
+		    line-height: 22px;
+		    text-align: center;
+		    border-bottom: 1px solid #e4e4e4;
+		}
+
+		a:link, a:visited {
+		    text-decoration: none;
+		    color: #323232;
+		}
+
+		.row_img .img_big {
+		    display: none;
+		    padding: 9px;
+		    position: absolute;
+		    z-index: 100;
+		    width: 200px;
+		    height: 200px;
+		    border: 1px solid #ccc;
+		    background-color: #fff;
+		    left: 100px;
+		    top: 0;
+		}
+		.row_img .img_big .arrow {
+		    width: 8px;
+		    height: 15px;
+		    display: block;
+		    background: url(../../img/icon_sprite.png) -18px -250px no-repeat;
+		    position: absolute;
+		    top: 52px;
+		    left: -7px;
+		}
+
+		.row_name {
+		    width: 330px;
+		    line-height: 18px;
+		    text-align: left;
+		    position: relative;
+		    padding-top: 17px;
+
+		    .name {
+			    display: block;
+			    width: 100%;
+			    height: 36px;
+			    overflow: hidden;
+			    margin-bottom: 27px;
+
+			    a {
+				    color: #323232;
+				}
+			}
+		}
+
+		.bb_none td {
+		    border-bottom: none 0;
+		}
+
+		.f3,
+		.row3 {
+		    width: 130px;
+		}
+
+		.price_n {
+		    color: #323232;
+		    font-size: 13px;
+		}
+
+		td span {
+		    display: block;
+		}
+
+		.low_price {
+		    background-color: #ff2832;
+		    color: #fff;
+		    text-align: center;
+		    position: relative;
+		    width: 76px;
+		    height: 24px;
+		    line-height: 24px;
+		    margin: 0 auto;
+		    border-radius: 3px;
+		    cursor: pointer;
+		    z-index: 99;
+		}
+
+		.red {
+		    color: #ff2832;
+		}
+
+		.amount {
+		    border: 1px solid #dcdcdc;
+		    height: 28px;
+		    width: 94px;
+		    line-height: 28px;
+		    font-size: 14px;
+		    margin: 5px auto;
+		    overflow: hidden;
+
+		    input {
+			    width: 36px;
+			    height: 28px;
+			    line-height: 28px\9;
+			    float: left;
+			    padding: 0;
+			    text-align: center;
+			    border: 1px solid #dcdcdc;
+			    border-width: 0 1px;
+			    background-color: #fff;
+			    font-weight: bold;
+			}
+		}
+
+		.amount a {
+		    display: block;
+		    float: left;
+		    height: 28px;
+		    width: 28px;
+		    line-height: 28px
+;		    background-color: #f4f4f4;
+		}
+
+		.row4 {
+		    color: #323232;
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		    color: #ff2832;
+		}
+
+		.total td {
+		    border-bottom: none 0;
+		    border-top: 1px solid #dcdcdc;
+		}
+
+		.total td.row_img {
+		    text-align: center;
+		    color: #323232;
+		    font-weight: bold;
+		    line-height: 22px;
+		    font-size: 12px;
+		    padding: 15px 20px 15px 0;
+		}
+
+		.total td {
+		    border-bottom: none 0;
+		    border-top: 1px solid #dcdcdc;
+		}
+
+		td {
+		    vertical-align: top;
+		    padding-top: 15px;
+		    position: relative;
+		    line-height: 22px;
+		    text-align: center;
+		    border-bottom: 1px solid #e4e4e4;
+		}
+
+		.total td.row4 {
+		    text-align: right;
+		    line-height: 18px;
+		    position: relative;
+		    padding-top: 10px;
+		}
+
+		.total td.row4 .big.ooline {
+		    padding-top: 8px;
+		}
+
+		.total td.row4 .big {
+		    font-size: 16px;
+		}
+		.total td.row4 .alignright {
+		    padding-right: 144px;
+		}
+	}
+
+	.shopping_total {
+	    width: 960px;
+	    height: 72px;
+	    z-index: 10;
+	    margin: 20px auto;
+	    padding: 0 62px;
+	    background: url(http://shopping.dangdang.com/shoppingcart/images/shopping_total.png) 0 center no-repeat;
+	    position: relative;
+
+	    .shopping_total_right {
+		    float: right;
+		    margin: 18px 0 0;
+		    width: 530px;
+		    position: relative;
+
+		    .total_btn {
+			    float: right;
+			    display: block;
+			    width: 116px;
+			    height: 38px;
+			    font: bold 18px/38px "Microsoft Yahei";
+			    color: #fff;
+			    background-color: #ff2832;
+			    border-radius: 2px;
+			    text-align: center;
+			    margin-top: 4px;
+			}
+
+			.subtotal {
+			    padding-right: 30px;
+			    line-height: 24px;
+			    float: right;
+
+			    .price {
+				    font-size: 18px;
+				    color: #ff2832;
+				}
+			}
+
+			.subtotal .cartsum {
+			    width: 114px;
+			    text-align: right;
+			    padding: 0 8px 0 0;
+			}
+
+			.subtotal span {
+			    display: inline-block;
+			}
+
+			.pop_ebook {
+			    width: 270px;
+			    height: auto;
+			    left: auto;
+			    right: 0;
+			    top: -169px;
+			    line-height: 20px;
+			    padding: 0 0 10px 10px;
+			    background-image: none;
+
+			    h1 {
+				    color: #646464;
+				    text-align: left;
+				    padding: 15px 0 8px;
+				    font-size: 14px;
+				}
+
+				.pop_btn {
+				    width: 66px;
+				}
+			}
+
+			.pop_del {
+			    position: absolute;
+			    width: 200px;
+			    height: 120px;
+			    z-index: 99;
+			    padding: 0 0 0 10px;
+			    border: 1px solid #ccc;
+			    background: url(http://shopping.dangdang.com/images/pop_del_bg.png) right bottom no-repeat #fff;
+			    text-align: center;
+			    top: -112px;
+			    left: -100px;
+
+			    p {
+				    font-size: 14px;
+				    color: #323232;
+				    line-height: 18px;
+				    padding: 25px 0;
+				}
+			}	
+		}
+
+		.shopping_total_left {
+			    float: left;
+			    line-height: 58px;
+			    width: 430px;
+			    position: relative;
+
+			    a.checknow {
+				    margin: 0 6px 0 0;
+				}
+
+				a {
+				    margin-left: 28px;
+				}
+
+				span {
+				    margin-left: 80px;
+				}
+			}
+			a.check_on, a.check_on:hover {
+			    border-color: #ff2832;
+			    background: #ff2832 url(../images/icon_sprite.png) no-repeat -65px -1px;
+			}
+
+			a.checknow {
+			    display: inline-block;
+			    width: 12px;
+			    height: 12px;
+			    border: 1px solid #bcbcbc;
+			    background-color: #fff;
+			    text-decoration: none;
+			    border-radius: 3px;
+			    font-size: 0;
+			    font-size: 0;
+			    line-height: 0;
+			    overflow: hidden;
+			    margin: 0 10px 0 0;
+			    vertical-align: text-bottom;
+			}
+	}
+
+	.empty {
+	    padding: 90px 0 0 495px;
+	    background: url(http://shopping.dangdang.com/shoppingcart/images/empty.png) 90px 46px no-repeat;
+	    height: 190px;
+
+	    p {
+		    font-size: 14px;
+		    color: #8a8888;
+		}
+
+		a.btn {
+		    width: 116px;
+		    height: 38px;
+		    display: inline-block;
+		    background-color: #ff2832;
+		    color: #fff;
+		    text-align: center;
+		    line-height: 38px;
+		    font-size: 18px;
+		    margin: 30px 20px 0 0;
+		    border-radius: 2px;
+		}
+	}
+
+	.shopping_ads {
+	    border: 1px solid #dcdcdc;
+	    margin-bottom: 20px;
+	    padding: 10px 0 15px;
+
+	    .ads_tab {
+			    line-height: 36px;
+			    height: 36px;
+			    padding-left: 25px;
+			    font-weight: bold;
+			    font-size: 16px;
+			    color: #323232;
+		}
+
+		.ads_box {
+		    position: relative;
+
+		    .left {
+			    left: 0;
+			    background-position: 0 -112px;
+			}
+
+			.arrow {
+			    position: absolute;
+			    width: 34px;
+			    height: 70px;
+			    background-image: url(../images/arrow_ad.png);
+			    top: 50%;
+			    margin-top: -50px;
+			    opacity: .8;
+			    filter: alpha(opacity=80);
+			    z-index: 9;
+			}
+
+			.right {
+			    right: 0;
+			    background-position: -34px -112px;
+			}
+
+			.ads_num {
+			    position: absolute;
+			    right: 30px;
+			    top: -23px;
+
+			    li.on {
+				    background: #fc2c3a;
+				}
+			}
+			.ads_num li {
+			    float: left;
+			    width: 8px;
+			    height: 8px;
+			    margin-left: 12px;
+			    _display: inline;
+			    overflow: hidden;
+			    line-height: 36px;
+			    font-size: 0;
+			    background: #c2c2c2;
+			    border-radius: 4px;
+			    cursor: pointer;
+			}
+
+			.show_list {
+			    padding: 5px 4px 0 14px;
+			    width: 940px;
+			    overflow: hidden;
+			}
+
+			.show_box,
+			.big_box {
+			    width: 10000px;
+			}
+
+			.line2 {
+			    width: 950px;
+			    float: left;
+			}
+
+			.show_box li {
+			    width: 150px;
+			    border: none 0;
+			    padding: 0 10px 12px;
+			    margin: 0 20px 0 0;
+			    text-align: center;
+			    float: left;
+			    color: #323232;
+			    line-height: 16px;
+			    position: relative;
+			    overflow: hidden;
+
+			    .gpic {
+				    display: inline-block;
+				    width: 150px;
+				    height: 150px;
+				    margin: 10px 0;
+				}
+
+				p {
+				    text-align: left;
+				    line-height: 14px;
+				    width: 150px;
+				    height: 28px;
+				    overflow: hidden;
+
+				    .price {
+					    font-size: 16px;
+					    color: #ff2832;
+					    line-height: 32px;
+					}
+				}
+
+				a {
+				    color: #323232;
+				}
+
+				.btn_add {
+				    position: absolute;
+				    top: 136px;
+				    left: 10px;
+				    width: 150px;
+				    height: 24px;
+				    display: none;
+				    line-height: 24px;
+				    background-color: #ff5e5e;
+				    color: #fff;
+				    opacity: .85;
+				    filter: alpha(opacity=85);
+				}
+
+				p.pl {
+				    height: 18px;
+				    line-height: 18px;
+				    overflow: hidden;
+				}
+
+				 p.pl a,
+				 p.pl a:hover {
+				    color: #787878;
+				    text-decoration: none;
+				    padding-left: 20px;
+				    background: url(http://shopping.dangdang.com/shoppingcart/images/ads_sprites.png) no-repeat 0 3px;
+				    overflow: hidden;
+				    width: 130px;
+				}
+
+				p.pl a span,
+				p.pl a:hover {
+				    color: #1a66b3;
+				    background-position: 0 -17px;
+				}
+			}
+
+		}
+
+
+	}
 }

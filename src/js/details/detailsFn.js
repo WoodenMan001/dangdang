@@ -2,9 +2,9 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-17 14:43:38
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 21:11:20
+* @Last Modified time: 2018-05-20 22:44:42
 */
-define([], function (){
+define(['../common/address'], function (ad){
 	return {
 		init:function($) {
 			//加减按钮方法
@@ -162,8 +162,9 @@ define([], function (){
 				if(!user) {
 					alert('请先登入账号');
 				}
-				console.log(124234)
-				$.post('http://localhost/project/dangdang/src/php/addshop.php'
+
+				let address = ad.addres;
+				$.post(address+'php/addshop.php'
 						,{'goodsid':goodsid,'username':user,'num':num}
 						,function(data){
 							if(data){

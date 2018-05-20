@@ -3,7 +3,7 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-14 10:43:20
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 09:54:22
+* @Last Modified time: 2018-05-20 19:37:02
 */
 /*
 * @Author: WoodenMan001
@@ -121,6 +121,7 @@ a {
   color: #6666; }
 
 ul.lunbo_tab {
+  z-index: 999;
   transform: translateX(-50%); }
   ul.lunbo_tab li.on {
     background: red;

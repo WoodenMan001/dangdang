@@ -2,9 +2,284 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>购物车-当当网</title>
+	<link rel="stylesheet" type="text/css" href="css/register/register.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 </head>
-<body>
+<body class="cart">
+	<header class="content_wrap">
+		<div class="head_nav">
+			<div class="main">
+				<div class="nav">
+					<ul>
+						<li>
+							<i class="fa fa-cart-plus"></i>
+							<a href="">购物车</a>
+						</li>
+						<li>
+							<a href="">
+						我的订单</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+						我的订单</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+							我的云书房</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li class="dropDown_obj">
+							<a href="">我的当当
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<div class="drop-down">
+								<ul>
+									<li>
+										<a href="">积分抵现</a>
+									</li>
+									<li>
+										<a href="">我的收藏</a>
+									</li>
+									<li>
+										<a href="">我的余额</a>
+									</li>
+									<li>
+										<a href="">我的评论</a>
+									</li>
+									<li>
+										<a href="">礼券/礼品卡</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+						小说投稿</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li>
+							<a href="">
+						我要出书</a>
+						</li>
+						<li class="bulkhead"></li>
+						<li class="dropDown_obj">
+							<a href="">企业采购
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<div class="drop-down">
+								<ul>
+									<li>
+										<a href="">大宗采购</a>
+									</li>
+									<li>
+										<a href="">礼品卡</a>
+									</li>
+									<li>
+										<a href="">礼品卡采购</a>
+									</li>
+									<li>
+										<a href="">礼品卡激活</a>
+									</li>
+									<li>
+										<a href="">礼品卡激活</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="bulkhead"></li>
+						<li class="dropDown_obj">
+							<a href="">客户服务
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<div class="drop-down">
+								<ul>
+									<li>
+										<a href="">帮助中心</a>
+									</li>
+									<li>
+										<a href="">自助退款</a>
+									</li>
+									<li>
+										<a href="">自主发货</a>									</li>
+									<li>
+										<a href="">联系客户</a>
+									</li>
+									<li>
+										<a href="">我要投诉</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="bulkhead"></li>
+					</ul>
+					<div>
+						欢迎光临当当，请<a href="login.html">登录</a> 成为会员
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="shoppingcart_wrapper content_wrap" id="ad_cpt_11850">
+			<div class="main">
+				<a >
+					<!-- <img src="http://img61.ddimg.cn/2018/5/16/2018051617281017065.jpg"> -->
+				</a>
+			</div>
+		</div>
+		<div class="logo_line content_wrap" id="ad_cpt_11850">
+			<div class="main">
+				<a >
+				</a>
+			</div>
+		</div>
+	</header>
 	
+	<div class="w960 mian " id="cart" style="display: block;">
+		<div id="box">
+	    <ul class="shopping_title" id="j_carttitle">
+	        <li class="f1"><a id="j_selectall" href="javascript:void(0)" class="checknow fn-checkall check_on" dd_name="全选">选中</a>全选</li>
+	        <li class="f2">商品信息</li>
+	        <li class="f3">单价（元）</li>
+	        <li class="f4">数量</li>
+	        <li class="f4">金额（元）</li>
+	        <li class="f5">操作</li>
+	    </ul>
+
+	    <div class="fn-shops"  id="J_cartContent">
+	    	<div class="fn-shop">
+	    		<table border="0" cellspacing="0" cellpadding="0" class="shop_title"> 
+	    			<tbody> 
+	    				<tr> 
+	    					<td>
+	    						<a  class="checknow fn-shop-checkall check_on">选中</a>
+	    					</td> 
+	    					<td><span class="shop_icon"></span></td> 
+	    					<td><a >当当自营</a></td>
+	    					<td class="coupon_title_td hide">
+	    						<div class="coupon_choose" id="coupon_title_0">
+	    							<a class="coupon_choose_pointer">优惠券</a>
+	    						</div>
+	    						<div id="coupon_pop_container" style="position: relative;z-index:99;"></div>
+	    					</td> 
+	    					<td></td>
+	    					<td></td> 
+	    				</tr> 
+					</tbody>
+				</table>
+			<div class="shopping_list">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" id="tables">
+					<tbody >
+						
+					</tbody>
+					<tfoot>
+						<tr class="total"> 
+							<td class="row1">&nbsp;</td> 
+							<td class="row_img">店铺合计</td>
+							<td colspan="2">&nbsp;</td>
+							<td colspan="3" class="row4">
+								<span id="total" class="red big ooline alignright">¥</span>
+							</td> 
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+    	</div>
+	</div>
+
+	<div style="position: static; bottom: -20px; z-index: 101; width: 100%; left: 0px;">
+	  	<div class="shopping_total" id="J_totalMoneyBlock" style="display: block;">
+	    	<div class="shopping_total_right">
+	        <a class="total_btn fn-checkout" href="javascript:;" id="checkout_btn" dd_name="结算">结&nbsp;&nbsp;算</a>
+	        <div class="subtotal">
+	            <p><span class="cartsum">总计(不含运费)：</span><span id="payAmount" class="price">¥66.00</span></p>
+
+	            <p><span class="cartsum">已节省：</span><span id="totalFavor">¥0.00</span></p>
+	        </div>
+	        <div class="pop_del pop_ebook fn-ck" id="ck_tip" style="display:none">
+				<h1>电子书重复购买提示</h1>
+				<p></p>
+				<a id="ck_link" href="#" class="pop_btn">朕知道了</a>
+			</div>
+	    </div>
+	    <div class="shopping_total_left" id="J_leftBar">
+	        <a id="j_selectall2"  class="checknow fn-checkall check_on">选中</a>全选
+	        <a id="j_removeproducts" class="fn-batch-remove" >批量删除</a>
+	        <span>已选择<font color="red">1</font>件商品</span>
+	        <div id="J_batchRemoveProductBox" style="display: none;z-index:-1;left:0px;" class="pop_del">
+	        	<p>您确定要批量删除商品吗？</p>
+	        	<a href="javascript:;" class="pop_btn fn-confirm-batchremovebox">确定</a>
+	        	<a href="javascript:;" class="pop_btn fn-close-batchremovebox">取消</a></div>
+	        <div id="J_batchAddWishBox" style="display: none;z-index:-1;left:85px;" class="pop_del col ">
+	        	<p>您确定要批量移入收藏吗？</p>
+	        	<a href="javascript:;" class="pop_btn fn-confirm-batchaddwish">确定</a>
+	        	<a href="javascript:;" class="pop_btn fn-close-batchwishbox">取消</a>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+	<div class="w960">
+		<div class="empty" id="empty" style="">
+	        <p>您的购物车还是空的，您可以：</p>
+	        <a class="btn">立即登录</a>
+	        <a >去逛逛</a>
+	    </div>
+
+	    <div class="shopping_ads" id="fn-weinituijian" style="">
+	    	<div class="ads_tab">为您推荐</div>
+	    	<div class="ads_box">
+	    		<a href="javascript:;" class="arrow left"></a>
+	    		<a href="javascript:;" class="arrow right"></a>
+	    		<ul class="ads_num">
+	    			<li class="pageTab on">1</li>
+	    			<li class="pageTab">2</li>
+	    			<li class="pageTab">3</li>
+	    			<li class="pageTab">4</li>
+	    			<li class="pageTab">5</li>
+	    		</ul>
+	    		<div class="show_list">
+	    			<div class="big_box">
+	    				<ul id="showList" class="show_box line2"  style="display: block;">
+	    					<!-- <li >
+	    						<a  class="gpic" >
+	    							<img src="http://img3x6.ddimg.cn/76/35/23427436-1_b_4.jpg" width="150" height="150">
+	    						</a>
+	    						<p>
+	    							<a >写给儿童的中国历史（全14册）</a>
+	    						</p>
+	    						<p>
+	    							<span class="price">¥177.50</span>
+	    						</p>
+	    						<a class="btn_add fn-btn-add">加入购物车</a>
+	    						<p class="pl">
+	    							<a >已有<span>285973</span>位用户评价</a>
+	    						</p>
+	    					</li> -->
+	    				</ul>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+	<div id="footer">
+		<div class="footer">
+			<div class="footer_nav_box">
+				<div class="footer_copyright">
+					<span>Copyright (C) 当当网 2004-2014, All Rights Reserved</span>
+					<a class="footer_img" >
+						<!-- <img src="//img60.ddimg.cn/upload_img/00459/index/validate.gif"> -->
+					</a>
+					<span>
+						<a >京ICP证041189号</a>
+					</span>
+					<span>出版物经营许可证&nbsp;新出发京批字第直0673号</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/require/require.js" data-main="js/cart/cart.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 					<ul>
 						<li>
 							<i class="fa fa-cart-plus"></i>
-							<a href="">购物车</a>
+							<a href="javascript:void(0)" id='gwc'>购物车</a>
 						</li>
 						<li>
 							<a href="">
@@ -319,12 +319,12 @@
 					</div>
 
 					<div class="home_circle_c">
-						<div class="focus_box_hover lunbo">
+						<div class="focus_box_hover lunbo" id='lunboBox'>
 							<div class="btn btn_l" style="left: -46px; z-index: 10;" id="btn_l">left</div>
 							<div class="btn btn_r" style="right: -46px; z-index: 10;" id="btn_r">right</div>
 
 							<div id="slidecontentbox" class="">
-								<ul class="pic lunbo_ul">
+								<ul class="pic lunbo_ul" >
 									<!-- <li>
 										<a href="">
 											<img src="http://img62.ddimg.cn/2018/5/11/2018051115065443219.jpg">
@@ -342,7 +342,7 @@
 									</li> -->
 								</ul>
 							</div>
-							<ul class="tab lunbo_tab">
+							<ul class="tab lunbo_tab" id="lunbo_tab">
 								<!-- <li>1</li>
 								<li>2</li>
 								<li>3</li> -->
@@ -1343,8 +1343,6 @@
 		</div>
 	</section>
 
-
-	<script src="js/homePage/homePage.js"></script>
-	<script type="text/javascript" src="js/homePage/init.js"></script>
+	<script src="js/require/require.js" data-main="js/homePage/homePage.js"></script>
 </body>
 </html>

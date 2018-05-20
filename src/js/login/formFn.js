@@ -2,9 +2,9 @@
 * @Author: WoodenMan001
 * @Date:   2018-05-16 16:53:53
 * @Last Modified by:   WoodenMan001
-* @Last Modified time: 2018-05-17 16:37:50
+* @Last Modified time: 2018-05-20 23:02:46
 */
-define([], function (){
+define(['../common/address'], function (ad){
 	return {
 		main: function($){
 			//提示span点击事件
@@ -68,7 +68,8 @@ define([], function (){
 			let username = $('#txtUsername').val();
 			let password = $('#txtPassword').val();
 			//ajax
-			$.post('http://localhost/project/dangdang/src/php/login.php'
+			let address = ad.addres;
+			$.post(address+'php/login.php'
 					,{'username':username,'password':password}
 					,function(data){
 						if(data==1){
@@ -89,14 +90,14 @@ define([], function (){
 				                $t--;
 				                if($t<0){
 				                  clearInterval(timer);
-				                  $(window).attr('location','http://localhost/project/dangdang/src/index.html');
+				                  $(window).attr('location',address+'index.html');
 				                }else{
 				                  $('#win strong').text($t);
 				                }     
 				              },1000)
 
 						} else {
-							$(window).attr('location','http://localhost/project/dangdang/src/login.html');
+							$(window).attr('location',address+'login.html');
 							alert('账号密码错误，请重试')
 						}
 					});
